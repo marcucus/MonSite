@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "../components/home/home";
 import Navbar from "../components/navbar/navbar";
+import Other from "../components/other/other";
 
 const Page = () => {
   return (
     <div className="w-full">
       <Navbar/>
-      <Home />
+      <Other />
     </div>
   );
 };
