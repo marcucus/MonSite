@@ -5,12 +5,17 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { atom, useAtom } from "jotai";
 import Link from "next/link";
+import localFont from "next/font/local";
 
 const navigation = [
-  { name: 'Home', href: '/', current: true, info :'HOME'},
+  { name: 'Accueil', href: '/', current: true, info :'HOME'},
   { name: 'Réalisations', href: '/real', current: false, info :'REAL'},
   { name: 'Autre', href: '/other', current: false, info :'OTHER' },
 ]
+
+const font = localFont({
+    src: "../../../fonts/Starjedi.ttf",
+  });
 
 export const selectedAtom = atom("HOME");
 
@@ -26,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-[#000814]">
         {({ open }) => (
         <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -45,11 +50,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex flex-shrink-0 items-center">
-                        <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Your Company"
-                        />
+                        <span className={`${font.className} text-xl text-white`}>AM</span>
                     </div>
                 <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">

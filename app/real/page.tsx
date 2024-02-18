@@ -4,7 +4,7 @@ import Real from "../components/real/real";
 
 const Page = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full bg-[#000814]">
       <Navbar/>
       <Real />
     </div>

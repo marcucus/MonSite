@@ -4,7 +4,7 @@ import Navbar from "../components/navbar/navbar";
 
 const Page = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full bg-[#000814]">
       <Navbar/>
       <Home />
     </div>
