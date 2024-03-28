@@ -1,9 +1,6 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { Transition } from '@headlessui/react'
-import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/20/solid'
-// import { HomeIcon } from "@heroicons/16/solid";
-import { FolderIcon } from '@heroicons/react/16/solid'
 
 interface InfoNotifs {
     iconNotif: string;

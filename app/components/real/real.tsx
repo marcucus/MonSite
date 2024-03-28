@@ -36,7 +36,7 @@ const Real = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-4">Foudroyer Ranking</h2>
             <p className="mt-4 text-gray-500">
               Partie du site internet <a href='https://www.foudroyer.com' className='font-bold'>foudroyer.com</a>, Ranking permet 
-              d'enregistrer des mots-clés afin de stocker leurs positionnement sur les moteurs de recherche : Google, Yandex, Bing.
+              d&rsquo;enregistrer des mots-clés afin de stocker leurs positionnement sur les moteurs de recherche : Google, Yandex, Bing.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ const Real = () => {
           <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-12">DIJOMA</h2>
             <p className="mt-4 text-gray-500">
-              Site internet <a href='https://tourmaline-cucurucho-f2dac4.netlify.app/' className='font-bold'>dijoma.be</a>. C'est un site vitrine pour l'entreprise Dijoma
+              Site internet <a href='https://tourmaline-cucurucho-f2dac4.netlify.app/' className='font-bold'>dijoma.be</a>. C&rsquo;est un site vitrine pour l&rsquo;entreprise Dijoma
             </p>
           </div>
 
