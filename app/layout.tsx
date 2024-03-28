@@ -1,18 +1,13 @@
 "use client";
 
 import Head from "next/head";
-import type { AppProps } from "next/app";
 import "./globals.css";
-import { Toaster } from "react-hot-toast";
-import Navbar from "./components/navbar/navbar";
 
 export default function RootLayout({
   children,
-  pageProps,
-}: Readonly<{
+}:{
   children: React.ReactNode;
-  pageProps: AppProps;
-}>) {
+}) {
   return (
     <html>
       <Head>
@@ -30,8 +25,6 @@ export default function RootLayout({
         />
       </Head>
       <body className={``}>
-          <Toaster position="top-right" />
-          <Navbar/>
           {children}
       </body>
     </html>
