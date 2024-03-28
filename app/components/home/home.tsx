@@ -3,6 +3,9 @@
 import React from 'react';
 import Notification from "../notifs/notifications";
 import localFont from "next/font/local";
+import Image from 'next/image';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
 
   const font = localFont({
     src: "../../../fonts/Starjedi.ttf",
@@ -11,24 +14,37 @@ import localFont from "next/font/local";
 const Home = () => {
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">      
-      <Notification iconNotif={'Home'} titleNotif={"Page D'accueil"} textNotif={"Bienvenue sur la page d'accueil, vous pouvez en apprendre plus sur moi ainsi que voir mes réalisations sur ce site !"}></Notification>
-    {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
-      <div className="mx-auto max-w-3xl">
+    <div className="block w-full">      
+        <div className='p-20 uppercase bg-gray-900 w-full h-full'>
+          <p className='text-[10px] font-bold text-[#e6d116]'>
+            Developpeur Web
+          </p>
+          <p className='text-[18px] -mt-1 font-bold text-[#6e6e6e]'>
+            Qui suis-je ?
+          </p>
 
-      <div className="bg-white rounded-2xl">
-        <div className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-            <h2 className={`${font.className} text-3xl font-bold text-gray-900 sm:text-4xl mt-20 tracking-wide`}>Adrien Marques</h2>
-            <p className="mt-4 text-gray-500">
-              Qui suis-je ?
-            </p>
-          </div>
+          <h2 className={`${font.className} text-3xl font-bold text-[#e6d116] sm:text-4xl tracking-wide normal-case`}>Adrien Marques</h2>
+          <p className='mt-2 font-normal text-[#e0e0e0] normal-case w-[224px] md:w-[424px]'>
+            Développeur Full-Stack, je suis passionné par l'informatique.
+            Je créer des applications ou sites internet afin d'offrir des expériences rapides et élégantes
+          </p>
+          <p className='mt-4'>
+            <span className='text-white text-[12px]'>Suivez-moi :</span>
+            <div className='flex space-x-2 mt-1'>
+              <a href='https://www.linkedin.com/in/adrien-marques-755393181/' target='_blank'>
+                <FaLinkedin className='text-white w-8 h-8 hover:text-[#e6d116] cursor-pointer'/>
+              </a>
+              <a href='https://github.com/marcucus' target='_blank'>
+                <FaGithubSquare className='text-white w-8 h-8 hover:text-[#e6d116] cursor-pointer'/>
+              </a>
+            </div>
+          </p>
         </div>
-      </div>
-    <br/>
-      </div>
-    </div>
+
+        <div className='p-20 uppercase bg-[#000814] w-full h-full'>
+          
+        </div>
+    </div> 
   );
 };
 

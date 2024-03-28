@@ -7,12 +7,6 @@ import { atom, useAtom } from "jotai";
 import Link from "next/link";
 import localFont from "next/font/local";
 
-const navigation = [
-  { name: 'Accueil', href: '/', current: true, info :'HOME'},
-  { name: 'Réalisations', href: '/real', current: false, info :'REAL'},
-  { name: 'Autre', href: '/other', current: false, info :'OTHER' },
-]
-
 const font = localFont({
     src: "../../../fonts/Starjedi.ttf",
   });
@@ -30,11 +24,11 @@ const Navbar = () => {
     const [selected, setSelected] = useAtom(selectedAtom);
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
         <Disclosure as="nav" className="bg-[#000814]">
         {({ open }) => (
         <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:py-2">
             <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -48,26 +42,63 @@ const Navbar = () => {
                     )}
                 </Disclosure.Button>
                 </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start -mt-2">
                     <div className="flex flex-shrink-0 items-center">
                         <span className={`${font.className} text-xl text-white`}>AM</span>
                     </div>
                 <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                        <Link href={`${item.href}`}>
+                    <div className="flex space-x-4 absolute right-0">
+
+                        <Link href='/'>
                             <button
-                            key={item.name}
-                            onClick={() => setSelected(item.info)}
                             className={classNames(
-                                selected == item.info ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                'rounded-md px-3 py-2 text-sm font-medium'
-                            )}
+                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                )}
                             >
-                            {item.name}
+                                Accueil
                             </button>
                         </Link>
-                    ))}
+
+                        <Link href='/'>
+                            <button
+                            className={classNames(
+                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                )}
+                            >
+                                A propos
+                            </button>
+                        </Link>
+
+                        <Link href='/'>
+                            <button
+                            className={classNames(
+                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                )}
+                            >
+                                Compétences
+                            </button>
+                        </Link>
+
+                        <Link href='/'>
+                            <button
+                            className={classNames(
+                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                )}
+                            >
+                                Projets
+                            </button>
+                        </Link>
+
+                        <Link href='/'>
+                            <button
+                            className={classNames(
+                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                )}
+                            >
+                                Contact
+                            </button>
+                        </Link>
+
                     </div>
                 </div>
                 </div>
@@ -78,19 +109,57 @@ const Navbar = () => {
 
             <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-                {navigation.map((item) => (
+
                 <Disclosure.Button
-                    key={item.name}
                     as="a"
-                    onClick={() => setSelected(item.info)}
-                    href={item.href}
+                    href='/'
                     className={classNames(
-                        'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'
+                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
                     )}
                 >
-                    {item.name}
+                    Accueil
                 </Disclosure.Button>
-                ))}
+
+                <Disclosure.Button
+                    as="a"
+                    href='/'
+                    className={classNames(
+                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                    )}
+                >
+                    A propos
+                </Disclosure.Button>
+
+                <Disclosure.Button
+                    as="a"
+                    href='/'
+                    className={classNames(
+                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                    )}
+                >
+                    Compétences
+                </Disclosure.Button>
+
+                <Disclosure.Button
+                    as="a"
+                    href='/'
+                    className={classNames(
+                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                    )}
+                >
+                    Projets
+                </Disclosure.Button>
+
+                <Disclosure.Button
+                    as="a"
+                    href='/'
+                    className={classNames(
+                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                    )}
+                >
+                    Contact
+                </Disclosure.Button>
+
             </div>
             </Disclosure.Panel>
         </>

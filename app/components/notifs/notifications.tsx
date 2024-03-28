@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/20/solid'
-import { HomeIcon } from '@heroicons/react/16/solid'
+// import { HomeIcon } from "@heroicons/16/solid";
 import { FolderIcon } from '@heroicons/react/16/solid'
 
 interface InfoNotifs {
@@ -25,7 +25,7 @@ const Notification = ({ iconNotif,titleNotif,textNotif }: InfoNotifs) => {
           {/* Notification panel, dynamically insert this into the live region when it needs to be displayed */}
           <Transition
             show={show}
-            as={Fragment}
+            // as={Fragment}
             enter="transform ease-out duration-300 transition"
             enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
             enterTo="translate-y-0 opacity-100 sm:translate-x-0"
@@ -38,10 +38,10 @@ const Notification = ({ iconNotif,titleNotif,textNotif }: InfoNotifs) => {
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     {iconNotif == 'Home' ? 
-                    <HomeIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                    "test"// <HomeIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
                     : 
                     iconNotif == 'Work' ?
-                    <FolderIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                    "test"// <FolderIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
                     :
                     ''
                     }
