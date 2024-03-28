@@ -3,6 +3,8 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+import Navbar from "./components/navbar/navbar";
 
 export default function RootLayout({
   children,
@@ -28,6 +30,8 @@ export default function RootLayout({
         />
       </Head>
       <body className={``}>
+          <Toaster position="top-right" />
+          <Navbar/>
           {children}
       </body>
     </html>
