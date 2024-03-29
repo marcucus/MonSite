@@ -45,7 +45,7 @@ const Home = () => {
 return (
   <>
     <div className="flex w-full font-semibold justify-center text-center sm:text-start content-center items-center">
-      <div className='block sm:grid sm:grid-cols-2 p-10 lg:p-20 uppercase xl:w-[70%] justify-center items-center content-center h-[calc(100vh-80px)] relative'>
+      <div className='block sm:grid sm:grid-cols-2 p-10 lg:p-20 uppercase 2xl:w-[70%] justify-center items-center content-center h-[calc(100vh-80px)] relative'>
         <motion.div
         variants={anim}
         initial="hidden"
