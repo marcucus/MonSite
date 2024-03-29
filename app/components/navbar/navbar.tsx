@@ -1,11 +1,13 @@
 'use client';
 
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { atom, useAtom } from "jotai";
 import Link from "next/link";
 import localFont from "next/font/local";
+import { useEffect } from "react";
+import {motion} from 'framer-motion'
 
 const font = localFont({
     src: "../../../fonts/Starjedi.ttf",
@@ -22,10 +24,32 @@ function classNames(...classes: string[]) {
 const Navbar = () => {
     
     const [selected, setSelected] = useAtom(selectedAtom);
+    const [isScrolled, setIsScrolled] = useState(false);
+    
+    const anim = {
+        hidden:{y:-50},
+        visible:{y:0},
+    }
+
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+      };
+    
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
   return (
-    <div className="w-full relative">
-        <Disclosure as="nav" className="bg-[#000814]">
+    <div className={`w-full relative ${isScrolled == true ? '' : '' } z-50`}>
+        <Disclosure as="nav" className={`${isScrolled ? 'bg-[#02023d]' : 'bg-[#070722] border-b-[1px] border-[#47478d]'} `}>
         {({ open }) => (
         <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:py-2">
@@ -49,55 +73,91 @@ const Navbar = () => {
                 <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4 absolute right-0">
 
-                        <Link href='/'>
-                            <button
-                            className={classNames(
-                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
-                                )}
-                            >
-                                Accueil
-                            </button>
-                        </Link>
+                        <motion.div
+                            variants={isScrolled !== true ? anim : {} }
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ duration: 0.2 }}
+                        >
+                            <Link href='/'>
+                                
+                                <button
+                                className={classNames(
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    )}
+                                >
+                                    Accueil
+                                </button>
+                            </Link>
+                        </motion.div>
 
-                        <Link href='/'>
-                            <button
-                            className={classNames(
-                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
-                                )}
-                            >
-                                A propos
-                            </button>
-                        </Link>
+                        <motion.div
+                            variants={isScrolled !== true ? anim : {} }
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ duration: 0.4 }}
+                        >
+                            <Link href='/'>
+                                <button
+                                className={classNames(
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    )}
+                                >
+                                    A propos
+                                </button>
+                            </Link>
+                        </motion.div>
 
-                        <Link href='/'>
-                            <button
-                            className={classNames(
-                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
-                                )}
-                            >
-                                Compétences
-                            </button>
-                        </Link>
+                        <motion.div
+                            variants={isScrolled !== true ? anim : {} }
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ duration: 0.6 }}
+                        >
+                            <Link href='/'>
+                                <button
+                                className={classNames(
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    )}
+                                >
+                                    Compétences
+                                </button>
+                            </Link>
+                        </motion.div>
 
-                        <Link href='/'>
-                            <button
-                            className={classNames(
-                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
-                                )}
-                            >
-                                Projets
-                            </button>
-                        </Link>
+                        <motion.div
+                            variants={isScrolled !== true ? anim : {} }
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ duration: 0.8 }}
+                        >
+                            <Link href='/'>
+                                <button
+                                className={classNames(
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    )}
+                                >
+                                    Projets
+                                </button>
+                            </Link>
+                        </motion.div>
 
-                        <Link href='/'>
-                            <button
-                            className={classNames(
-                                `text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
-                                )}
-                            >
-                                Contact
-                            </button>
-                        </Link>
+                        <motion.div
+                            variants={isScrolled !== true ? anim : {} }
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ duration: 1 }}
+                        >   
+                            <Link href='/'>
+                                <button
+                                className={classNames(
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    )}
+                                >
+                                    Contact
+                                </button>
+                            </Link>
+                        </motion.div>
 
                     </div>
                 </div>

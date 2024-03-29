@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import "./globals.css";
+import Navbar from "./components/navbar/navbar";
 
 export default function RootLayout({
   children,
@@ -24,8 +25,9 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </Head>
-      <body className={``}>
-          {children}
+      <body className={`bg-[#070722] bg-bgStars bg-contain w-full`}>
+        <Navbar/>
+        {children}
       </body>
     </html>
   );
