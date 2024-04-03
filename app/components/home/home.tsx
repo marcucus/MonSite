@@ -47,12 +47,12 @@ return (
     <div className="flex w-full font-semibold justify-center text-center sm:text-start content-center items-center">
       <div className='block sm:grid sm:grid-cols-2 p-10 lg:p-20 uppercase 2xl:w-[70%] justify-center items-center content-center h-[calc(100vh-80px)] relative'>
         <motion.div
-        variants={anim}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 1 }}
+          variants={anim}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1 }}
         >
-          <p className='text-[10px] font-bold text-[#e6d116]'>
+          <p className='text-[10px] xl:text-[15px] font-bold text-[#e6d116]'>
             Developpeur Web
           </p>
           <p className='text-[18px] -mt-1 font-bold text-[#6e6e6e]'>
@@ -60,9 +60,9 @@ return (
           </p>
 
           <h2 className={`${font.className} text-3xl font-bold text-[#e6d116] sm:text-4xl tracking-wide normal-case`}>Adrien Marques</h2>
-          <p className='mt-2 font-normal text-[#e0e0e0] normal-case md:w-[424px]'>
+          <p className='mt-2 font-normal text-[#e0e0e0] normal-case xl:text-[18px] md:w-[424px] 2xl:text-[22px] 2xl:w-[600px]'>
             Développeur Full-Stack, je suis passionné par l&rsquo;informatique.
-            Je créer des applications ou sites internet afin d&rsquo;offrir des expériences rapides et élégantes
+            Je créer des applications ou sites internet afin d&rsquo;offrir des expériences rapides et élégantes.
           </p>
           <p className='mt-4'>
             <span className='text-white text-[12px]'>Suivez-moi :</span>

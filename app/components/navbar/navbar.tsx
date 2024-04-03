@@ -48,8 +48,8 @@ const Navbar = () => {
       }, []);
 
   return (
-    <div className={`w-full relative ${isScrolled == true ? '' : '' } z-50`}>
-        <Disclosure as="nav" className={`${isScrolled ? 'bg-[#02023d]' : 'bg-[#070722] border-b-[1px] border-[#47478d]'} `}>
+    <div className={`w-full  ${isScrolled == true ? 'fixed' : 'relative' } z-50`}>
+        <Disclosure as="nav" className={`${isScrolled ? 'bg-[#00001f] border-b-[1px] border-[#47478d]' : 'bg-[#070722] border-b-[1px] border-[#47478d]'} `}>
         {({ open }) => (
         <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:py-2">
@@ -83,7 +83,7 @@ const Navbar = () => {
                                 
                                 <button
                                 className={classNames(
-                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
                                     )}
                                 >
                                     Accueil
@@ -100,7 +100,7 @@ const Navbar = () => {
                             <Link href='/'>
                                 <button
                                 className={classNames(
-                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
                                     )}
                                 >
                                     A propos
@@ -117,7 +117,7 @@ const Navbar = () => {
                             <Link href='/'>
                                 <button
                                 className={classNames(
-                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
                                     )}
                                 >
                                     Compétences
@@ -134,7 +134,7 @@ const Navbar = () => {
                             <Link href='/'>
                                 <button
                                 className={classNames(
-                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
                                     )}
                                 >
                                     Projets
@@ -151,7 +151,7 @@ const Navbar = () => {
                             <Link href='/'>
                                 <button
                                 className={classNames(
-                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] font-normal font-techMono uppercase`
+                                    `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
                                     )}
                                 >
                                     Contact
@@ -174,7 +174,7 @@ const Navbar = () => {
                     as="a"
                     href='/'
                     className={classNames(
-                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                        'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] xl:text-[18px] font-normal font-techMono uppercase'
                     )}
                 >
                     Accueil
