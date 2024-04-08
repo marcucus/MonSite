@@ -94,7 +94,7 @@ const Skills = () => {
         return (
             <>
                 <div className="flex md:hidden justify-center items-center overflow-hidden">
-                    <button onClick={prevSkill} className="px-4 py-2 mr-8 text-gray-200 rounded"><SlArrowLeft className='w-6 h-6' /></button>
+                    <button onClick={prevSkill} className="px-4 py-2 mr-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
                     <AnimatePresence mode='wait'>
                         <motion.div
                             key={currentIndex}
@@ -110,11 +110,11 @@ const Skills = () => {
                             })}
                         </motion.div>
                     </AnimatePresence>
-                    <button onClick={nextSkill} className="px-4 py-2 ml-8 text-gray-200 rounded bg-[#C158F233] border border-[#C158F2]"><SlArrowRight className='w-6 h-6' /></button>
+                    <button onClick={nextSkill} className="px-4 py-2 ml-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
                 </div>
 
                 <div className="hidden md:flex lg:hidden justify-center items-center overflow-hidden">
-                    <button onClick={prevSkill} className="px-4 py-2 mr-8 text-gray-200 rounded"><SlArrowLeft className='w-6 h-6' /></button>
+                    <button onClick={prevSkill} className="px-4 py-2 mr-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
                     <AnimatePresence mode='wait'>
                         <motion.div
                             key={currentIndex}
@@ -130,11 +130,11 @@ const Skills = () => {
                             })}
                         </motion.div>
                     </AnimatePresence>
-                    <button onClick={nextSkill} className="px-2 py-2 ml-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border border-[#C158F2]"><SlArrowRight className='w-6 h-6' /></button>
+                    <button onClick={nextSkill} className="px-2 py-2 ml-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
                 </div>
 
                 <div className="hidden lg:flex justify-center items-center overflow-hidden">
-                    <button onClick={prevSkill} className="px-2 py-2 mr-8 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
+                    <button onClick={prevSkill} className="px-2 py-2 mr-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
                         <AnimatePresence mode='wait'>
                             <motion.div
                                 key={currentIndex}
@@ -150,7 +150,7 @@ const Skills = () => {
                                 })}
                             </motion.div>
                         </AnimatePresence>
-                    <button onClick={nextSkill} className="px-2 py-2 ml-8 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
+                    <button onClick={nextSkill} className="px-2 py-2 ml-8 w-[44px] h-[44px] text-gray-200 rounded bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105 relative"><SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center' /></button>
                 </div>
                 
                 </>
@@ -159,47 +159,11 @@ const Skills = () => {
 
 return (
   <>
-
-    <div className="bg-[#010120] select-none">
+    <div className="bg-[#010120] select-none pt-[20px] pb-[40px]">
+        <div className='flex justify-center content-center items-center text-[18px] text-[#e6d116] font-bold'>MES COMPETENCES</div>
+        <div className='flex justify-center content-center items-center text-[18px] text-[#e2e2e2] mb-4'>Evoluent</div>
         <SkillCarousel skills={ski} />
     </div>
-
-    {/* <div className="flex w-full justify-center content-center text-center sm:text-start bg-[#010120] items-center">
-        <div className='block w-full text-white'>
-            <div className='flex justify-center items-center content-center gap-4 w-full overflow-hidden'>
-            {skills.map((skill,index) =>{
-                let level;
-                switch(skill.level){
-                    case 1 :
-                        level = (<div className='flex w-full justify-center items-center content-center'>Intermédiaire</div>)
-                        break;
-                    case 2 :
-                        level = (<div className='flex w-full justify-center items-center content-center'>Expérimenté</div>)
-                        break;
-                    default :
-                        level = (<div className='flex w-full justify-center items-center content-center'>Junior</div>)
-                }
-                    return(
-                        <div
-                            key={index}
-                            className=''
-                        >
-                            <div className='flex w-full  justify-center items-center content-center'>
-                                {skill.pict}
-                            </div>
-
-                            <div className='flex w-full  justify-center items-center content-center'>
-                                {skill.name}
-                            </div>
-
-                            {level}
-
-                        </div>
-                    )
-            })}
-            </div>
-        </div>
-    </div> */}
   </>
   );
 };
