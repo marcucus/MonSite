@@ -1,3 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-button-next {
+  background-image: url('/public/avantfleche.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  background-image: url('/public/arrierefleche.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  transform: none;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  border-color: #c158f2;
+  border-width: 2px;
+  background-color: rgba(193, 88, 242, 0.2);
+  border-radius: 0.25rem;
+  color: #718096;
+  height: 44px;
+  width: 44px;
+  margin-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(193, 88, 242, 0.1), 0 2px 4px 0 rgba(193, 88, 242, 0.2);
+}
+
+
+
+/* Style au survol */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  transform: scale(1.05);
+}
+
+.swiper-button::before{
+  border-width: 2px 2px 0 0;
+  transform: rotate(-45deg);
+  top: 50%;
+  left: 30%;
+}
+
+.swiper-button::before,
+.swiper-button::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-button::after{
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+  bottom: 50%;
+  right: 30%;
+}
+
+/* Style lorsqu'un bouton est désactivé (par exemple, au début ou à la fin du carrousel) */
+.swiper-button-disabled {
+  opacity: 0.5; /* Opacité réduite */
+  cursor: not-allowed; /* Curseur non autorisé */
+}

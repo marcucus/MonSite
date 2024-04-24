@@ -13,7 +13,7 @@ const About = () => {
 
 return (
   <>
-    <div className="flex w-full justify-center content-center text-center sm:text-start bg-[#010120] items-center p-10 lg:p-15 xl:p-20 ">
+    <div className="flex w-full justify-center content-center text-center sm:text-start bg-[#010120] items-center p-10 lg:p-15 xl:p-10">
       <div className='flex uppercase justify-center items-center content-center relative'>
         <div className='block'>
           <p className='text-[10px] font-bold text-[#e6d116] flex justify-center items-center content-center 2xl:text-[18px]'>
@@ -24,7 +24,7 @@ return (
               Adrien Marques
           </p>
 
-          <p className='mt-2 font-normal text-[#e0e0e0] normal-case md:w-[300px] lg:w-[500px] 2xl:text-[22px] 2xl:w-[700px] text-center'>
+          <p className='mt-2 font-normal text-[#e0e0e0] normal-case md:w-full lg:w-[500px] xl:w-[400px] 2xl:text-[22px] 2xl:w-[700px] text-center'>
           Développeur basé en région Parisienne, je suis développeur FullStack spécialisé des deux côtés Back et Front.
           Je teste et optimise niveau SEO les applications que je développe. 
           </p>

@@ -8,8 +8,10 @@ const Page = () => {
   return (
     <div>
       <Home />
-      <About/>
-      <Skills/>
+      <div className="grid xl:grid-cols-3 2xl:grid-cols-3">
+        <span className="xl:col-span-2 2xl:col-span-2"><Skills/></span>
+        <About/>
+      </div>
     </div>
   );
 };
