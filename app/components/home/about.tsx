@@ -24,12 +24,12 @@ return (
               Adrien Marques
           </p>
 
-          <p className='mt-2 font-normal text-[#e0e0e0] normal-case md:w-full lg:w-[500px] xl:w-[400px] 2xl:text-[22px] 2xl:w-[700px] text-center'>
+          <p className='mt-2 font-normal text-[#e0e0e0] normal-case md:w-full lg:w-[500px] xl:w-[400px] 2xl:text-[22px] 2xl:w-[600px] text-center'>
           Développeur basé en région Parisienne, je suis développeur FullStack spécialisé des deux côtés Back et Front.
           Je teste et optimise niveau SEO les applications que je développe. 
           </p>
           <span className='flex justify-center items-center content-center mt-4'>
-              <a href='../../MarquesAdrienCV.pdf' download className='flex text-[15px] font-semibold lg:text-[15px] w-[170px] justify-center items-center content-center bg-[#e6d116] rounded-md px-4 py-2 gap-3'>
+              <a href='../../CVMarquesAdrien.pdf' download className='flex text-[15px] font-semibold lg:text-[15px] w-[170px] justify-center items-center content-center bg-[#e6d116] rounded-md px-4 py-2 gap-3'>
                   <FaDownload /> Mon CV
               </a>
           </span>

@@ -8,14 +8,26 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-[40%] -right-12 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center ml-1' /></div>
+    <div 
+        onClick={onClick} 
+        className="absolute top-[40%] -right-12 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 
+            shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all 
+            duration-500 ease-in-out transform hover:scale-105 cursor-pointer">
+            <SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center ml-1' />
+        </div>
   );
 }
 
 function SamplePrevArrow(props:any) {
   const { className, style, onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-[40%] -left-11 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center mr-1' /></div>
+    <div 
+        onClick={onClick} 
+        className="absolute top-[40%] -left-11 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 
+            shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all 
+            duration-500 ease-in-out transform hover:scale-105 cursor-pointer">
+            <SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center mr-1' />
+        </div>
   );
 }
 
@@ -33,7 +45,9 @@ function CustomArrows() {
     prevArrow: <SamplePrevArrow />
   };
   return (
-    <div className="slider-container relative">
+    <div 
+        className="slider-container relative cursor-pointer"
+    >
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
