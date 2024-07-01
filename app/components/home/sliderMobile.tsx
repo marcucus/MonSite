@@ -20,7 +20,7 @@ function SamplePrevArrow(props:any) {
 }
 
 function CustomArrowsMobile() {
-    let sliderRef = useRef(null);
+    let sliderRef = useRef<Slider | null>(null);
 
   const settings = {
     dots: true,
@@ -34,7 +34,7 @@ function CustomArrowsMobile() {
   };
   return (
     <div className="slider-container relative">
-      <Slider ref={slider => (sliderRef = slider)} {...settings}>
+      <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/React.png"} width={50} height={50} alt='image skills' />
