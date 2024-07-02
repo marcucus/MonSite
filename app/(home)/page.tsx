@@ -25,7 +25,7 @@ const Page = () => {
         <Real />
       </div>
 
-      <div className="flex justify-center content-center items-center pt-24" id="contact">
+      <div className="flex justify-center content-center items-center pt-12" id="contact">
         <Contact />
       </div>
     </div>
