@@ -4,6 +4,7 @@ import Navbar from "../components/navbar/navbar";
 import About from "../components/home/about";
 import Skills from "../components/home/skills";
 import Real from "../components/real/real";
+import Contact from "../components/contact/contact";
 
 const Page = () => {
   return (
@@ -12,15 +13,18 @@ const Page = () => {
 
       <div className="grid xl:grid-cols-3 2xl:grid-cols-3">
         <span className="xl:col-span-2 2xl:col-span-2">
-          <Skills/>
+          <Skills />
         </span>
-        <About/>
+        <About />
       </div>
 
-      <div className="bg-[#010120] ">
-        <Real/>
+      <div className="bg-[#010120] px-10 pt-24 pb-36">
+        <Real />
       </div>
 
+      <div>
+        <Contact />
+      </div>
     </div>
   );
 };

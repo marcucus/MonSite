@@ -3,6 +3,7 @@
 import Head from "next/head";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
+import Footer from "./components/navbar/footer";
 
 export default function RootLayout({
   children,
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={`bg-[#070722] bg-bgStars bg-contain w-full`}>
         <Navbar/>
         {children}
+        <Footer />
       </body>
     </html>
   );

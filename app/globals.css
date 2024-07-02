@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .swiper-button-next {
   background-image: url('/public/avantfleche.png');
   background-size: contain;
@@ -78,4 +81,18 @@
 .swiper-button-disabled {
   opacity: 0.5; /* Opacité réduite */
   cursor: not-allowed; /* Curseur non autorisé */
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.animate-shine {
+background-size: 200% auto;
+animation: shine 3s linear infinite;
 }
