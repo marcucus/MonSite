@@ -69,8 +69,8 @@ function CustomArrows() {
                 <div>
                     <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">Tailwind CSS</h3>
                     <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
-                            Intermédiaire
+                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
+                            Expérimenté
                         </div>
                     </p>
                 </div>
@@ -121,7 +121,7 @@ function CustomArrows() {
 
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Php.png"} width={100} height={100} alt='image skills' />
+                <Image src={"/Php.png"} width={150} height={150} alt='image skills' />
                 <div>
                     <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">PHP</h3>
                     <p className="text-sm text-gray-200">

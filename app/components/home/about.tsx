@@ -13,14 +13,14 @@ const About = () => {
 
 return (
   <>
-    <div className="flex w-full justify-center content-center text-center sm:text-start bg-[#010120] items-center p-10 lg:p-15 xl:p-10">
+    <div className="flex w-full justify-center content-center text-center sm:text-start bg-[#010120] items-center p-10 lg:p-10 xl:p-10 pt-20 lg:pt-0">
       <div className='flex uppercase justify-center items-center content-center relative'>
         <div className='block'>
-          <p className='text-[10px] font-bold text-[#e6d116] flex justify-center items-center content-center 2xl:text-[18px]'>
+          <p className='text-2xl xl:text-[10px] font-bold text-[#e6d116] flex justify-center items-center content-center 2xl:text-[18px]'>
               A propos
           </p>
 
-          <p className={`text-[18px] -mt-1 tracking-wide normal-case text-[#ffffff] ${font.className} flex justify-center items-center content-center 2xl:text-[22px]`}>
+          <p className={`text-2xl xl:text-[18px] -mt-1 tracking-wide normal-case text-[#ffffff] ${font.className} flex justify-center items-center content-center 2xl:text-[22px]`}>
               Adrien Marques
           </p>
 

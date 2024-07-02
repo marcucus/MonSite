@@ -11,18 +11,21 @@ const Page = () => {
     <div>
       <Home />
 
-      <div className="grid xl:grid-cols-3 2xl:grid-cols-3">
-        <span className="xl:col-span-2 2xl:col-span-2">
+      <div className="grid xl:grid-cols-3 2xl:grid-cols-3" id="apropos">
+        <span className="hidden xl:block xl:col-span-2 2xl:col-span-2">
           <Skills />
         </span>
         <About />
+        <span className="xl:hidden">
+          <Skills />
+        </span>
       </div>
 
-      <div className="bg-[#010120] px-10 pt-24 pb-36">
+      <div className="bg-[#010120] px-10 pt-16 pb-36" id="projets">
         <Real />
       </div>
 
-      <div>
+      <div className="flex justify-center content-center items-center" id="contact">
         <Contact />
       </div>
     </div>

@@ -8,7 +8,7 @@ import bones from '../../../public/bonesmarketplace.png';
 import lcf from '../../../public/lcf.png';
 import { MdComputer } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
-
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import Notification from '../notifs/notifications';
 import Slider from 'react-slick';
 
@@ -37,6 +37,31 @@ const marketplaces = [
   { name: 'Technologies Front', description: 'React, Tailwind CSS, NextJS, Firebase' },
 ]
 
+function SampleNextArrow(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div 
+      onClick={onClick} 
+      className="absolute top-[40%] -right-8 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#14143A] 
+      border-2 shadow-sm shadow-[#14143A] border-[#47478d] flex justify-center content-center items-center 
+      transition-all duration-500 ease-in-out transform hover:scale-105 cursor-pointer">
+        <SlArrowRight className='ml-0.5' />
+      </div>
+  );
+}
+
+function SamplePrevArrow(props:any) {
+  const { className, style, onClick } = props;
+  return (
+    <div 
+      onClick={onClick} 
+      className="absolute top-[40%] -left-8 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#14143A] 
+      border-2 shadow-sm shadow-[#14143A] border-[#47478d] flex justify-center content-center items-center 
+      transition-all duration-500 ease-in-out transform hover:scale-105 cursor-pointer">
+        <SlArrowLeft className='mr-0.5' />
+      </div>
+  );
+}
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const settings = {
@@ -45,14 +70,17 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows:false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   };
 
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
         <div key={index} className="px-2 h-full"> {/* Ajoutez des padding horizontaux */}
-          <div className="bg-[#14143A] p-4 rounded shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
+          <div className="bg-[#14143A] p-4 rounded-xl shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
           <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : lcf} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#b8b8f8] via-[#6a6a94] to-[#4747ff] animate-shine mb-4'>
@@ -131,14 +159,17 @@ const CarouselMobile: React.FC<CarouselProps> = ({ items }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows:false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   };
 
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
         <div key={index} className="px-2 h-full"> {/* Ajoutez des padding horizontaux */}
-          <div className="bg-[#14143A] p-4 rounded shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
+          <div className="bg-[#14143A] p-4 rounded-xl shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
           <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : lcf} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#b8b8f8] via-[#6a6a94] to-[#4747ff] animate-shine mb-4'>
@@ -216,14 +247,17 @@ const CarouselTab: React.FC<CarouselProps> = ({ items }) => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows:false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   };
 
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
         <div key={index} className="px-2 h-full"> {/* Ajoutez des padding horizontaux */}
-          <div className="bg-[#14143A] p-4 rounded shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
+          <div className="bg-[#14143A] p-4 rounded-xl shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
           <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : lcf} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#b8b8f8] via-[#6a6a94] to-[#4747ff] animate-shine mb-4'>
@@ -317,6 +351,10 @@ const Real = () => {
 
   return (
     <>
+        <div className="pt-10">
+          <div className='flex justify-center content-center items-center text-3xl text-[#e6d116] font-bold'>MES PROJETS</div>
+          <div className='flex justify-center content-center items-center text-[13px] md:text-[18px] text-[#e2e2e2] mb-4'>Mes réalisations et les projets où je suis intervenu</div>
+        </div>
       <div className="hidden lg:block">
         <Carousel items={items} />
       </div>

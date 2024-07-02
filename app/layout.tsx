@@ -3,6 +3,7 @@
 import Head from "next/head";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
+import { Toaster } from "react-hot-toast";
 import Footer from "./components/navbar/footer";
 
 export default function RootLayout({
@@ -27,6 +28,7 @@ export default function RootLayout({
         />
       </Head>
       <body className={`bg-[#070722] bg-bgStars bg-contain w-full`}>
+        <Toaster position="top-right" />
         <Navbar/>
         {children}
         <Footer />

@@ -38,7 +38,7 @@ function CustomArrowsMobile() {
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/React.png"} width={50} height={50} alt='image skills' />
-                <div>
+                <div className="mt-auto">
                     <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">React</h3>
                     <p className="text-xs text-gray-200">
                         <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
@@ -52,11 +52,11 @@ function CustomArrowsMobile() {
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/Tailwind.png"} width={50} height={50} alt='image skills' />
-                <div>
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Tailwind CSS</h3>
+                <div className="mt-auto">
+                    <h3 className="text-[11px] font-semibold text-gray-200 flex justify-center items-center content-center">Tailwind CSS</h3>
                     <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
-                            Intermédiaire
+                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
+                            Expérimenté
                         </div>
                     </p>
                 </div>
@@ -66,7 +66,7 @@ function CustomArrowsMobile() {
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/Docker.svg"} width={50} height={50} alt='image skills' />
-                <div>
+                <div className="mt-auto">
                     <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Docker</h3>
                     <p className="text-xs text-gray-200">
                         <div className='flex w-full justify-center items-center content-center font-bold text-green-500'>
@@ -80,7 +80,7 @@ function CustomArrowsMobile() {
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/Angular.png"} width={50} height={50} alt='image skills' />
-                <div>
+                <div className="mt-auto">
                     <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Angular</h3>
                     <p className="text-xs text-gray-200">
                         <div className='flex w-full justify-center items-center content-center font-bold text-green-500'>
@@ -94,7 +94,7 @@ function CustomArrowsMobile() {
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/Symfony.png"} width={50} height={50} alt='image skills' />
-                <div>
+                <div className="mt-auto">
                     <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Symfony</h3>
                     <p className="text-xs text-gray-200">
                         <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
@@ -108,7 +108,7 @@ function CustomArrowsMobile() {
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
                 <Image src={"/Php.png"} width={50} height={50} alt='image skills' />
-                <div>
+                <div className="mt-auto">
                     <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">PHP</h3>
                     <p className="text-xs text-gray-200">
                         <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
@@ -121,9 +121,9 @@ function CustomArrowsMobile() {
 
         <div>
             <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Javascript.png"} width={50} height={50} alt='image skills' />
-                <div>
-                    <h3 className="text-[14px] font-semibold text-gray-200 flex justify-center items-center content-center">JavaScript</h3>
+                <Image src={"/Javascript.png"} width={50} height={50} alt='image skills' className="w-[50px h-[50px]"/>
+                <div className="mt-auto">
+                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">JavaScript</h3>
                     <p className="text-xs text-gray-200">
                         <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
                             Intermédiaire

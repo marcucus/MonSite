@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <>
-        <div className={`w-full  ${isScrolled == true ? 'fixed' : 'relative'} z-50`}>
+        <div className={`w-full  ${isScrolled == true ? 'fixed' : 'fixed'} z-50`}>
           <Disclosure as="nav" className={`${isScrolled ? 'bg-[#00001f] border-b-[1px] border-[#47478d]' : 'bg-[#070722] border-b-[1px] border-[#47478d]'} `}>
               {({ open }) => (
                   <>
@@ -98,7 +98,7 @@ const Navbar = () => {
                                               animate="visible"
                                               transition={{ duration: 0.4 }}
                                           >
-                                              <Link href='/'>
+                                              <Link href='#apropos'>
                                                   <button
                                                       className={classNames(
                                                           `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
@@ -115,7 +115,7 @@ const Navbar = () => {
                                               animate="visible"
                                               transition={{ duration: 0.6 }}
                                           >
-                                              <Link href='/'>
+                                              <Link href='#apropos'>
                                                   <button
                                                       className={classNames(
                                                           `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
@@ -132,7 +132,7 @@ const Navbar = () => {
                                               animate="visible"
                                               transition={{ duration: 0.8 }}
                                           >
-                                              <Link href='/'>
+                                              <Link href='#projets'>
                                                   <button
                                                       className={classNames(
                                                           `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
@@ -149,7 +149,7 @@ const Navbar = () => {
                                               animate="visible"
                                               transition={{ duration: 1 }}
                                           >
-                                              <Link href='/'>
+                                              <Link href='#contact'>
                                                   <button
                                                       className={classNames(
                                                           `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
@@ -183,7 +183,7 @@ const Navbar = () => {
 
                               <Disclosure.Button
                                   as="a"
-                                  href='/'
+                                  href='#apropos'
                                   className={classNames(
                                       'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
                                   )}
@@ -193,7 +193,7 @@ const Navbar = () => {
 
                               <Disclosure.Button
                                   as="a"
-                                  href='/'
+                                  href='#apropos'
                                   className={classNames(
                                       'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
                                   )}
@@ -203,7 +203,7 @@ const Navbar = () => {
 
                               <Disclosure.Button
                                   as="a"
-                                  href='/'
+                                  href='#projets'
                                   className={classNames(
                                       'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
                                   )}
@@ -213,7 +213,7 @@ const Navbar = () => {
 
                               <Disclosure.Button
                                   as="a"
-                                  href='/'
+                                  href='#contact'
                                   className={classNames(
                                       'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
                                   )}
