@@ -21,11 +21,11 @@ const Page = () => {
         </span>
       </div>
 
-      <div className="bg-[#010120] px-10 pt-16 pb-36" id="projets">
+      <div className="bg-[#010120] px-10 pt-16 pb-24" id="projets">
         <Real />
       </div>
 
-      <div className="flex justify-center content-center items-center" id="contact">
+      <div className="flex justify-center content-center items-center pt-24" id="contact">
         <Contact />
       </div>
     </div>
