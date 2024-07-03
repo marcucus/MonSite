@@ -8,14 +8,14 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-[40%] -right-12 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowRight className='absolute w-4 h-4 flex justify-center content-center items-center ml-1' /></div>
+    <div onClick={onClick} className="absolute top-[40%] -right-9 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowRight className='absolute w-4 h-4 flex justify-center content-center items-center ml-1' /></div>
   );
 }
 
 function SamplePrevArrow(props:any) {
   const { className, style, onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-[40%] -left-11 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowLeft className='absolute w-4 h-4 flex justify-center content-center items-center mr-1' /></div>
+    <div onClick={onClick} className="absolute top-[40%] -left-8 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowLeft className='absolute w-4 h-4 flex justify-center content-center items-center mr-1' /></div>
   );
 }
 

@@ -5,6 +5,10 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .swiper-button-next {
   background-image: url('/public/avantfleche.png');
   background-size: contain;

@@ -11,21 +11,23 @@ const Page = () => {
     <div>
       <Home />
 
-      <div className="grid xl:grid-cols-3 2xl:grid-cols-3" id="apropos">
-        <span className="hidden xl:block xl:col-span-2 2xl:col-span-2">
-          <Skills />
-        </span>
-        <About />
-        <span className="xl:hidden">
-          <Skills />
-        </span>
+      <div className="bg-[#010120] border-t-2 border-[#47478d]" id="apropos">
+        <div className="grid xl:grid-cols-3 2xl:grid-cols-3 md:p-20">
+          <span className="hidden xl:block xl:col-span-2 2xl:col-span-2">
+            <Skills />
+          </span>
+          <About />
+          <span className="xl:hidden">
+            <Skills />
+          </span>
+        </div>
       </div>
 
-      <div className="bg-[#010120] px-10 pt-16 pb-24" id="projets">
+      <div className="bg-[#010120] px-10 pt-16 pb-[120px] border-b-2 border-[#47478d]" id="projets">
         <Real />
       </div>
 
-      <div className="flex justify-center content-center items-center pt-12" id="contact">
+      <div className="flex justify-center content-center items-center pt-12 pb-12" id="contact">
         <Contact />
       </div>
     </div>
