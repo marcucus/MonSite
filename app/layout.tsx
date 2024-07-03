@@ -1,10 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
 import Head from "next/head";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/navbar/footer";
+
+export const metadata: Metadata = {
+  title: "Marques Adrien - Présentation / Projets",
+  description: "Bienvenue sur mon site ! Découvrez qui je suis et explorez les nombreux projets auxquels j'ai contribué.",
+};
 
 export default function RootLayout({
   children,
