@@ -356,15 +356,15 @@ const Real = () => {
         <div className='flex justify-center content-center items-center text-[13px] md:text-[18px] text-[#e2e2e2] mb-4'>Mes réalisations et les projets où je suis intervenu</div>
       </div>
 
-      <div className="hidden lg:block">
+      <div className="hidden lg:block cursor-pointer">
         <Carousel items={items} />
       </div>
 
-      <div className="hidden md:block lg:hidden">
+      <div className="hidden md:block lg:hidden cursor-pointer">
           <CarouselTab items={items} />
       </div>
       
-      <div className="block md:hidden">
+      <div className="block md:hidden cursor-pointer">
           <CarouselMobile items={items} />
       </div>
     </>
