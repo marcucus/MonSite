@@ -6,6 +6,7 @@ import ranking from '../../../public/ranking.png';
 import dijoma from '../../../public/dijoma.png';
 import bones from '../../../public/bonesmarketplace.png';
 import lcf from '../../../public/lcf.png';
+import forest from '../../../public/forestria.png'
 import { MdComputer } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
@@ -35,6 +36,10 @@ const lcfautos = [
 
 const marketplaces = [
   { name: 'Technologies Front', description: 'React, Tailwind CSS, NextJS, Firebase' },
+]
+
+const forestria = [
+  { name: 'Technologies Front', description: 'Symfony, Twig, MySQL' },
 ]
 
 function SampleNextArrow(props: any) {
@@ -81,7 +86,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="px-2 h-full"> {/* Ajoutez des padding horizontaux */}
           <div className="bg-[#14143A] p-4 rounded-xl shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
-          <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : lcf} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
+          <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : item.title.includes("LCF") ? lcf : forest} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#b8b8f8] via-[#6a6a94] to-[#4747ff] animate-shine mb-4'>
                 {
@@ -91,7 +96,9 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                   ? rankings[0].description 
                   : item.title.includes("Bones") 
                     ? marketplaces[0].description 
-                    : lcfautos[0].description
+                    : item.title.includes("LCF") 
+                      ? lcfautos[0].description
+                      : forestria[0].description
                 }
               </p>
               <h3 className="2xl:text-lg font-bold mb-2">{item.title}</h3>
@@ -138,6 +145,17 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                       <MdComputer/> LIVE DEMO
                     </a>
                     <a href="https://github.com/marcucus/carproject" target="_blank" className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116]">
+                      <IoLogoGithub/> CODE
+                    </a>
+                  </>
+                )}
+
+                {item.title.includes("Forestria") && (
+                  <>
+                    <div className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116] cursor-not-allowed">
+                      <MdComputer/> UNAIVALABLE
+                    </div>
+                    <a href="https://github.com/marcucus/forestria" target="_blank" className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116]">
                       <IoLogoGithub/> CODE
                     </a>
                   </>
@@ -170,7 +188,7 @@ const CarouselMobile: React.FC<CarouselProps> = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="px-2 h-full"> {/* Ajoutez des padding horizontaux */}
           <div className="bg-[#14143A] p-4 rounded-xl shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
-          <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : lcf} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
+          <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : item.title.includes("LCF") ? lcf : forest} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#b8b8f8] via-[#6a6a94] to-[#4747ff] animate-shine mb-4'>
                 {
@@ -180,7 +198,9 @@ const CarouselMobile: React.FC<CarouselProps> = ({ items }) => {
                   ? rankings[0].description 
                   : item.title.includes("Bones") 
                     ? marketplaces[0].description 
-                    : lcfautos[0].description
+                    : item.title.includes("LCF") 
+                      ? lcfautos[0].description
+                      : forestria[0].description
                 }
               </p>
               <h3 className="2xl:text-lg font-bold mb-2">{item.title}</h3>
@@ -227,6 +247,17 @@ const CarouselMobile: React.FC<CarouselProps> = ({ items }) => {
                       <MdComputer/> LIVE DEMO
                     </a>
                     <a href="https://github.com/marcucus/carproject" target="_blank" className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116]">
+                      <IoLogoGithub/> CODE
+                    </a>
+                  </>
+                )}
+
+                {item.title.includes("Forestria") && (
+                  <>
+                    <div className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116] cursor-not-allowed">
+                      <MdComputer/> UNAIVALABLE
+                    </div>
+                    <a href="https://github.com/marcucus/forestria" target="_blank" className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116]">
                       <IoLogoGithub/> CODE
                     </a>
                   </>
@@ -258,7 +289,7 @@ const CarouselTab: React.FC<CarouselProps> = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="px-2 h-full"> {/* Ajoutez des padding horizontaux */}
           <div className="bg-[#14143A] p-4 rounded-xl shadow flex flex-col gap-2 text-white flex-grow h-[644px]"> {/* Style de chaque élément */}
-          <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : lcf} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
+          <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : item.title.includes("LCF") ? lcf : forest} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#b8b8f8] via-[#6a6a94] to-[#4747ff] animate-shine mb-4'>
                 {
@@ -268,7 +299,9 @@ const CarouselTab: React.FC<CarouselProps> = ({ items }) => {
                   ? rankings[0].description 
                   : item.title.includes("Bones") 
                     ? marketplaces[0].description 
-                    : lcfautos[0].description
+                    : item.title.includes("LCF") 
+                      ? lcfautos[0].description
+                      : forestria[0].description
                 }
               </p>
               <h3 className="2xl:text-lg font-bold mb-2">{item.title}</h3>
@@ -319,6 +352,17 @@ const CarouselTab: React.FC<CarouselProps> = ({ items }) => {
                     </a>
                   </>
                 )}
+
+                {item.title.includes("Forestria") && (
+                  <>
+                    <div className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116] cursor-not-allowed">
+                      <MdComputer/> UNAIVALABLE
+                    </div>
+                    <a href="https://github.com/marcucus/forestria" target="_blank" className="flex justify-center items-center content-center gap-1 font-semibold text-gray-300 hover:text-[#e6d116]">
+                      <IoLogoGithub/> CODE
+                    </a>
+                  </>
+                )}
               </div>
 
           </div>
@@ -346,6 +390,10 @@ const Real = () => {
     { 
       title: "Dijoma", 
       description: "Site vitrine présentant toutes les activités de l'entreprise Dijoma." 
+    },
+    { 
+      title: "Forestria", 
+      description: "Site représentant tout les parcours de randonnées dans la ville de Limoges sous forme de carte interactive." 
     },
   ];
 
