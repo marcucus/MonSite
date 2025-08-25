@@ -185,3 +185,26 @@ button, a, .interactive {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
+
+/* Console specific styles */
+.console-container {
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 #1e293b;
+}
+
+.console-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.console-container::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.console-container::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 3px;
+}
+
+.console-container::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
