@@ -20,18 +20,18 @@ const Experience = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      title: "Développeur Full-Stack",
-      company: "Projets Freelance",
-      period: "2022 - Présent",
+      title: "Lead et Développeur Full Stack",
+      company: "Datakeen",
+      period: "Mars 2025 - Présent",
       type: "work",
       description: [
-        "Développement d'applications web modernes avec React/Next.js et Symfony",
-        "Optimisation SEO et performance des sites web",
-        "Intégration de solutions e-commerce et marketplaces",
-        "Accompagnement client de la conception à la mise en production"
+        "Direction technique et développement d'applications web modernes",
+        "Architecture et développement avec React/Next.js et technologies backend",
+        "Encadrement d'équipe et coordination de projets",
+        "Optimisation des performances et mise en place de bonnes pratiques"
       ],
-      technologies: ["React", "Next.js", "Symfony", "PHP", "JavaScript", "TailwindCSS"],
-      icon: <FaCode />
+      technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
+      icon: <FaBriefcase />
     },
     {
       id: 2,

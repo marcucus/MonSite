@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <>
         <div className={`w-full  ${isScrolled == true ? 'fixed' : 'fixed'} z-50`}>
-          <Disclosure as="nav" className={`${isScrolled ? 'bg-[#00001f] border-b-[1px] border-[#47478d]' : 'bg-[#070722] border-b-[1px] border-[#47478d]'} `}>
+          <Disclosure as="nav" className={`${isScrolled ? 'glass border-b border-primary-500/30' : 'glass-dark border-b border-primary-500/20'} transition-all duration-300`}>
               {({ open }) => (
                   <>
                       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:py-2">
@@ -84,7 +84,7 @@ const Navbar = () => {
 
                                                   <button
                                                       className={classNames(
-                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                          `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
                                                       )}
                                                   >
                                                       Accueil
@@ -101,7 +101,7 @@ const Navbar = () => {
                                               <Link href='#apropos'>
                                                   <button
                                                       className={classNames(
-                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                          `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
                                                       )}
                                                   >
                                                       A propos
@@ -118,7 +118,7 @@ const Navbar = () => {
                                               <Link href='#apropos'>
                                                   <button
                                                       className={classNames(
-                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                          `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
                                                       )}
                                                   >
                                                       Compétences
@@ -135,7 +135,7 @@ const Navbar = () => {
                                               <Link href='#experience'>
                                                   <button
                                                       className={classNames(
-                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                          `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
                                                       )}
                                                   >
                                                       Expérience
@@ -152,7 +152,7 @@ const Navbar = () => {
                                               <Link href='#projets'>
                                                   <button
                                                       className={classNames(
-                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                          `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
                                                       )}
                                                   >
                                                       Projets
@@ -169,7 +169,7 @@ const Navbar = () => {
                                               <Link href='#contact'>
                                                   <button
                                                       className={classNames(
-                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                          `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
                                                       )}
                                                   >
                                                       Contact
@@ -192,7 +192,7 @@ const Navbar = () => {
                                   as="a"
                                   href='/'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] xl:text-[18px] font-normal font-techMono uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] xl:text-[18px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Accueil
@@ -202,7 +202,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#apropos'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   A propos
@@ -212,7 +212,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#apropos'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Compétences
@@ -222,7 +222,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#experience'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Expérience
@@ -232,7 +232,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#projets'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Projets
@@ -242,7 +242,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#contact'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Contact
@@ -255,7 +255,7 @@ const Navbar = () => {
           </Disclosure>
 
         <motion.div
-            className={`h-1 bg-[#47478d] bottom-0  ${isScrolled == true ? 'flex' : 'hidden'}`}
+            className={`h-1 bg-gradient-to-r from-primary-500 to-accent-500 bottom-0  ${isScrolled == true ? 'flex' : 'hidden'}`}
             style={{ scaleX: scrollYProgress }}
         />
       </div>
