@@ -3,6 +3,7 @@ import Home from "../components/home/home";
 import Navbar from "../components/navbar/navbar";
 import About from "../components/home/about";
 import Skills from "../components/home/skills";
+import Experience from "../components/home/experience";
 import Real from "../components/real/real";
 import Contact from "../components/contact/contact";
 
@@ -11,7 +12,7 @@ const Page = () => {
     <div>
       <Home />
 
-      <div className="bg-[#010120] border-t-2 border-[#47478d]" id="apropos">
+      <div className="bg-dark-900 border-t-2 border-primary-800/50" id="apropos">
         <div className="grid xl:grid-cols-3 2xl:grid-cols-3 md:p-20">
           <span className="hidden xl:block xl:col-span-2 2xl:col-span-2">
             <Skills />
@@ -23,7 +24,12 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="bg-[#010120] px-10 pt-16 pb-[120px] border-b-2 border-[#47478d]" id="projets">
+      {/* New Experience Section */}
+      <div id="experience">
+        <Experience />
+      </div>
+
+      <div className="bg-dark-900 px-10 pt-16 pb-[120px] border-b-2 border-primary-800/50" id="projets">
         <Real />
       </div>
 

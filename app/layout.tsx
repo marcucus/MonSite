@@ -31,7 +31,7 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </Head>
-      <body className={`bg-[#070722] bg-bgStars bg-contain w-full`}>
+      <body className={`bg-dark-950 bg-bgStars bg-contain w-full`}>
         <Toaster position="top-right" />
         <Navbar/>
         {children}
