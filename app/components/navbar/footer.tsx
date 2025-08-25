@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { FaLinkedin, FaGithubSquare, FaHeart } from "react-icons/fa";
 import { motion } from 'framer-motion';

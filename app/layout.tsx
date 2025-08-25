@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/navbar/navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/navbar/footer";
+import ClientComponents from "./components/ClientComponents";
 
 export const metadata: Metadata = {
   title: "Marques Adrien - Présentation / Projets",
@@ -31,11 +32,14 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </Head>
-      <body className={`bg-dark-950 bg-bgStars bg-contain w-full`}>
+      <body className={`bg-dark-950 bg-bgStars bg-contain w-full relative`}>
+        <ClientComponents />
         <Toaster position="top-right" />
-        <Navbar/>
-        {children}
-        <Footer />
+        <div className="relative z-10">
+          <Navbar/>
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
