@@ -8,14 +8,66 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-[40%] -right-9 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowRight className='absolute w-4 h-4 flex justify-center content-center items-center ml-1' /></div>
+    <div 
+      onClick={onClick} 
+      className="absolute top-[40%] -right-9 w-[30px] h-[30px] text-gray-200 rounded-lg glass border-2 
+        border-primary-500/50 flex justify-center content-center items-center transition-all 
+        duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-500/20 hover:shadow-glow cursor-pointer z-10"
+    >
+      <SlArrowRight className='w-3 h-3' />
+    </div>
   );
 }
 
 function SamplePrevArrow(props:any) {
   const { className, style, onClick } = props;
   return (
-    <div onClick={onClick} className="absolute top-[40%] -left-8 w-[30px] h-[30px] text-gray-200 rounded-full bg-[#C158F233] border-2 shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all duration-500 ease-in-out transform hover:scale-105"><SlArrowLeft className='absolute w-4 h-4 flex justify-center content-center items-center mr-1' /></div>
+    <div 
+      onClick={onClick} 
+      className="absolute top-[40%] -left-9 w-[30px] h-[30px] text-gray-200 rounded-lg glass border-2 
+        border-primary-500/50 flex justify-center content-center items-center transition-all 
+        duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-500/20 hover:shadow-glow cursor-pointer z-10"
+    >
+      <SlArrowLeft className='w-3 h-3' />
+    </div>
+  );
+}
+
+const skillLevelColors = {
+  "Expérimenté": "text-accent-400",
+  "Intermédiaire": "text-primary-400", 
+  "Junior": "text-green-400"
+};
+
+const skillLevelBg = {
+  "Expérimenté": "bg-accent-900/30",
+  "Intermédiaire": "bg-primary-900/30",
+  "Junior": "bg-green-900/30"
+};
+
+function SkillCardMobile({ src, alt, title, level }: {
+  src: string, alt: string, title: string, level: string
+}) {
+  return (
+    <div className="px-1">
+      <div className='card-modern p-3 w-[100px] h-[120px] gap-2 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
+        <div className="relative">
+          <Image 
+            src={src} 
+            width={40} 
+            height={40} 
+            alt={alt}
+            className="transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        <div className="text-center space-y-1">
+          <h3 className="text-xs font-semibold text-white group-hover:text-primary-300 transition-colors leading-tight">{title}</h3>
+          <div className={`inline-flex px-1.5 py-0.5 rounded-full text-xs font-medium ${skillLevelColors[level as keyof typeof skillLevelColors]} ${skillLevelBg[level as keyof typeof skillLevelBg]}`}>
+            {level.substring(0, 4)}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -30,108 +82,23 @@ function CustomArrowsMobile() {
     autoplay: true,
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+    dotsClass: "slick-dots !bottom-[-40px]",
+    customPaging: () => (
+      <div className="w-2 h-2 rounded-full bg-gray-600 hover:bg-primary-400 transition-colors duration-300"></div>
+    )
   };
+  
   return (
     <div className="slider-container relative">
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/React.png"} width={50} height={50} alt='image skills' />
-                <div className="mt-auto">
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">React</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
-                            Expérimenté
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Tailwind.png"} width={50} height={50} alt='image skills' />
-                <div className="mt-auto">
-                    <h3 className="text-[11px] font-semibold text-gray-200 flex justify-center items-center content-center">Tailwind CSS</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
-                            Expérimenté
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Docker.svg"} width={50} height={50} alt='image skills' />
-                <div className="mt-auto">
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Docker</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-green-500'>
-                            Junior
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Angular.png"} width={50} height={50} alt='image skills' />
-                <div className="mt-auto">
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Angular</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-green-500'>
-                            Junior
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Symfony.png"} width={50} height={50} alt='image skills' />
-                <div className="mt-auto">
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">Symfony</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
-                            Intermédiaire
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Php.png"} width={50} height={50} alt='image skills' />
-                <div className="mt-auto">
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">PHP</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
-                            Expérimenté
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[100px] h-[107px] gap-2 justify-center items-center content-center'>
-                <Image src={"/Javascript.png"} width={50} height={50} alt='image skills' className="w-[50px h-[50px]"/>
-                <div className="mt-auto">
-                    <h3 className="text-[13px] font-semibold text-gray-200 flex justify-center items-center content-center">JavaScript</h3>
-                    <p className="text-xs text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
-                            Intermédiaire
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
+        <SkillCardMobile src="/React.png" alt="React" title="React" level="Expérimenté" />
+        <SkillCardMobile src="/Tailwind.png" alt="Tailwind CSS" title="Tailwind CSS" level="Expérimenté" />
+        <SkillCardMobile src="/Docker.svg" alt="Docker" title="Docker" level="Junior" />
+        <SkillCardMobile src="/Angular.png" alt="Angular" title="Angular" level="Junior" />
+        <SkillCardMobile src="/Symfony.png" alt="Symfony" title="Symfony" level="Intermédiaire" />
+        <SkillCardMobile src="/Php.png" alt="PHP" title="PHP" level="Expérimenté" />
+        <SkillCardMobile src="/Javascript.png" alt="JavaScript" title="JavaScript" level="Intermédiaire" />
       </Slider>
     </div>
   );

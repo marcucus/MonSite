@@ -10,10 +10,10 @@ function SampleNextArrow(props: any) {
   return (
     <div 
         onClick={onClick} 
-        className="absolute top-[40%] -right-12 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 
-            shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all 
-            duration-500 ease-in-out transform hover:scale-105 cursor-pointer">
-            <SlArrowRight className='absolute w-6 h-6 flex justify-center content-center items-center ml-1' />
+        className="absolute top-[40%] -right-12 w-[44px] h-[44px] text-gray-200 rounded-lg glass border-2 
+            border-primary-500/50 flex justify-center content-center items-center transition-all 
+            duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-500/20 hover:shadow-glow cursor-pointer z-10">
+            <SlArrowRight className='w-5 h-5' />
         </div>
   );
 }
@@ -23,11 +23,49 @@ function SamplePrevArrow(props:any) {
   return (
     <div 
         onClick={onClick} 
-        className="absolute top-[40%] -left-11 w-[44px] h-[44px] text-gray-200 rounded-full bg-[#C158F233] border-2 
-            shadow-sm shadow-[#C158F2] border-[#C158F2] flex justify-center content-center items-center transition-all 
-            duration-500 ease-in-out transform hover:scale-105 cursor-pointer">
-            <SlArrowLeft className='absolute w-6 h-6 flex justify-center content-center items-center mr-1' />
+        className="absolute top-[40%] -left-12 w-[44px] h-[44px] text-gray-200 rounded-lg glass border-2 
+            border-primary-500/50 flex justify-center content-center items-center transition-all 
+            duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-500/20 hover:shadow-glow cursor-pointer z-10">
+            <SlArrowLeft className='w-5 h-5' />
         </div>
+  );
+}
+
+const skillLevelColors = {
+  "Expérimenté": "text-accent-400",
+  "Intermédiaire": "text-primary-400", 
+  "Junior": "text-green-400"
+};
+
+const skillLevelBg = {
+  "Expérimenté": "bg-accent-900/30",
+  "Intermédiaire": "bg-primary-900/30",
+  "Junior": "bg-green-900/30"
+};
+
+function SkillCard({ src, alt, title, level, width = 100, height = 100 }: {
+  src: string, alt: string, title: string, level: string, width?: number, height?: number
+}) {
+  return (
+    <div className="px-2">
+      <div className='card-modern p-6 w-[200px] h-[240px] gap-4 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
+        <div className="relative">
+          <Image 
+            src={src} 
+            width={width} 
+            height={height} 
+            alt={alt}
+            className="transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        <div className="text-center space-y-2">
+          <h3 className="text-lg font-semibold text-white group-hover:text-primary-300 transition-colors">{title}</h3>
+          <div className={`inline-flex px-3 py-1 rounded-full text-sm font-medium ${skillLevelColors[level as keyof typeof skillLevelColors]} ${skillLevelBg[level as keyof typeof skillLevelBg]}`}>
+            {level}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -42,110 +80,23 @@ function CustomArrows() {
     autoplay: true,
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+    dotsClass: "slick-dots !bottom-[-50px]",
+    customPaging: () => (
+      <div className="w-3 h-3 rounded-full bg-gray-600 hover:bg-primary-400 transition-colors duration-300"></div>
+    )
   };
+  
   return (
-    <div 
-        className="slider-container relative cursor-pointer"
-    >
+    <div className="slider-container relative">
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/React.png"} width={100} height={100} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">React</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
-                            Expérimenté
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Tailwind.png"} width={100} height={100} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">Tailwind CSS</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
-                            Expérimenté
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Docker.svg"} width={100} height={100} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">Docker</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-green-500'>
-                            Junior
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Angular.png"} width={100} height={100} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">Angular</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-green-500'>
-                            Junior
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Symfony.png"} width={100} height={100} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">Symfony</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
-                            Intermédiaire
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Php.png"} width={150} height={150} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">PHP</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-red-500'>
-                            Expérimenté
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='flex flex-col p-4 shadow-lg rounded-lg m-2 bg-[#C158F233] border border-[#C158F2] w-[200px] h-[207px] gap-4 justify-center items-center content-center'>
-                <Image src={"/Javascript.png"} width={100} height={100} alt='image skills' />
-                <div>
-                    <h3 className="md:text-lg font-semibold text-gray-200 flex justify-center items-center content-center">JavaScript</h3>
-                    <p className="text-sm text-gray-200">
-                        <div className='flex w-full justify-center items-center content-center font-bold text-orange-500'>
-                            Intermédiaire
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
+        <SkillCard src="/React.png" alt="React" title="React" level="Expérimenté" />
+        <SkillCard src="/Tailwind.png" alt="Tailwind CSS" title="Tailwind CSS" level="Expérimenté" />
+        <SkillCard src="/Docker.svg" alt="Docker" title="Docker" level="Junior" />
+        <SkillCard src="/Angular.png" alt="Angular" title="Angular" level="Junior" />
+        <SkillCard src="/Symfony.png" alt="Symfony" title="Symfony" level="Intermédiaire" />
+        <SkillCard src="/Php.png" alt="PHP" title="PHP" level="Expérimenté" width={150} height={150} />
+        <SkillCard src="/Javascript.png" alt="JavaScript" title="JavaScript" level="Intermédiaire" />
       </Slider>
     </div>
   );
