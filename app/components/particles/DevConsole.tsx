@@ -41,8 +41,8 @@ const DevConsole: React.FC = () => {
         <div className="space-y-2">
           <div className="text-accent-400">🚀 Adrien Marques - Développeur Full-Stack</div>
           <div className="text-gray-300">
-            Passionné par l'innovation technologique et l'expérience utilisateur.
-            J'aime créer des applications qui combinent performance et élégance.
+            Passionné par l&apos;innovation technologique et l&apos;expérience utilisateur.
+            J&apos;aime créer des applications qui combinent performance et élégance.
           </div>
           <div className="text-primary-400">Version: Human 1.0 (stable)</div>
           <div className="text-green-400">Status: Ready for new challenges ✅</div>
@@ -164,7 +164,7 @@ const DevConsole: React.FC = () => {
     const command: ConsoleCommand = {
       command: cmd,
       output: commands[trimmedCmd as keyof typeof commands]?.output || 
-              <span className="text-red-400">Command not found. Type 'help' for available commands.</span>,
+              <span className="text-red-400">Command not found. Type &apos;help&apos; for available commands.</span>,
       timestamp
     };
 
@@ -235,15 +235,15 @@ const DevConsole: React.FC = () => {
         command: '',
         output: (
           <div className="space-y-2">
-            <div className="text-accent-400">🎉 Welcome to Adrien's Developer Console!</div>
-            <div className="text-gray-300">Type 'help' to see available commands.</div>
+            <div className="text-accent-400">🎉 Welcome to Adrien&apos;s Developer Console!</div>
+            <div className="text-gray-300">Type &apos;help&apos; to see available commands.</div>
             <div className="text-sm text-gray-500">Pro tip: Use ↑/↓ arrows to navigate command history</div>
           </div>
         ),
         timestamp: new Date().toLocaleTimeString()
       }]);
     }
-  }, [isOpen]);
+  }, [isOpen, commandHistory.length]);
 
   return (
     <>

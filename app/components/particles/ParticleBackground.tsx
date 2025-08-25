@@ -224,7 +224,7 @@ const ParticleBackground: React.FC = () => {
       canvas.removeEventListener('click', handleClick);
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
+  }, [animate, handleClick, resizeCanvas]);
 
   return (
     <canvas
