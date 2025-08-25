@@ -132,6 +132,23 @@ const Navbar = () => {
                                               animate="visible"
                                               transition={{ duration: 0.8 }}
                                           >
+                                              <Link href='#experience'>
+                                                  <button
+                                                      className={classNames(
+                                                          `text-gray-300 hover:bg-[#47478d] hover:text-white rounded-md px-3 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal font-techMono uppercase`
+                                                      )}
+                                                  >
+                                                      Expérience
+                                                  </button>
+                                              </Link>
+                                          </motion.div>
+
+                                          <motion.div
+                                              variants={isScrolled !== true ? anim : {}}
+                                              initial="hidden"
+                                              animate="visible"
+                                              transition={{ duration: 1 }}
+                                          >
                                               <Link href='#projets'>
                                                   <button
                                                       className={classNames(
@@ -199,6 +216,16 @@ const Navbar = () => {
                                   )}
                               >
                                   Compétences
+                              </Disclosure.Button>
+
+                              <Disclosure.Button
+                                  as="a"
+                                  href='#experience'
+                                  className={classNames(
+                                      'flex justify-center items-center content-center rounded-md px-3 py-2 text-base text-gray-300 hover:bg-gray-700 hover:text-white text-[14px] font-normal font-techMono uppercase'
+                                  )}
+                              >
+                                  Expérience
                               </Disclosure.Button>
 
                               <Disclosure.Button
