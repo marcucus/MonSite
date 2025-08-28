@@ -10,11 +10,11 @@ function SampleNextArrow(props: any) {
   return (
     <div 
       onClick={onClick} 
-      className="absolute top-[40%] -right-6 w-[32px] h-[32px] text-gray-200 rounded-lg glass border-2 
+      className="absolute top-[40%] -right-4 sm:-right-6 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] text-gray-200 rounded-lg glass border-2 
         border-primary-500/50 flex justify-center content-center items-center transition-all 
         duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-500/20 hover:shadow-glow cursor-pointer z-10"
     >
-      <SlArrowRight className='w-3 h-3' />
+      <SlArrowRight className='w-3 h-3 sm:w-4 sm:h-4' />
     </div>
   );
 }
@@ -24,11 +24,11 @@ function SamplePrevArrow(props:any) {
   return (
     <div 
       onClick={onClick} 
-      className="absolute top-[40%] -left-6 w-[32px] h-[32px] text-gray-200 rounded-lg glass border-2 
+      className="absolute top-[40%] -left-4 sm:-left-6 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] text-gray-200 rounded-lg glass border-2 
         border-primary-500/50 flex justify-center content-center items-center transition-all 
         duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-500/20 hover:shadow-glow cursor-pointer z-10"
     >
-      <SlArrowLeft className='w-3 h-3' />
+      <SlArrowLeft className='w-3 h-3 sm:w-4 sm:h-4' />
     </div>
   );
 }
@@ -58,20 +58,20 @@ function SkillCardMobile({ src, alt, title, level }: {
   const displayLevel = levelAbbreviations[level as keyof typeof levelAbbreviations] || level;
 
   return (
-    <div className="px-2">
-      <div className='card-modern p-4 w-[140px] h-[160px] gap-3 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
+    <div className="px-1 sm:px-2">
+      <div className='card-modern p-3 sm:p-4 w-[150px] sm:w-[160px] h-[170px] sm:h-[180px] gap-2 sm:gap-3 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
         <div className="relative">
           <Image 
             src={src} 
-            width={55} 
-            height={55} 
+            width={60} 
+            height={60} 
             alt={alt}
             className="transition-transform duration-300 group-hover:scale-110"
           />
         </div>
-        <div className="text-center space-y-2">
-          <h3 className="text-sm font-semibold text-white group-hover:text-primary-300 transition-colors leading-tight">{title}</h3>
-          <div className={`inline-flex px-3 py-1 rounded-full text-xs font-medium ${skillLevelColors[level as keyof typeof skillLevelColors]} ${skillLevelBg[level as keyof typeof skillLevelBg]}`}>
+        <div className="text-center space-y-1 sm:space-y-2">
+          <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-primary-300 transition-colors leading-tight">{title}</h3>
+          <div className={`inline-flex px-2 sm:px-3 py-1 rounded-full text-xs font-medium ${skillLevelColors[level as keyof typeof skillLevelColors]} ${skillLevelBg[level as keyof typeof skillLevelBg]}`}>
             {displayLevel}
           </div>
         </div>
@@ -92,9 +92,9 @@ function CustomArrowsMobile() {
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    dotsClass: "slick-dots !bottom-[-40px]",
+    dotsClass: "slick-dots !bottom-[-50px]",
     customPaging: () => (
-      <div className="w-2 h-2 rounded-full bg-gray-600 hover:bg-primary-400 transition-colors duration-300"></div>
+      <div className="w-3 h-3 rounded-full bg-gray-600 hover:bg-primary-400 transition-colors duration-300"></div>
     ),
     responsive: [
       {
@@ -112,7 +112,7 @@ function CustomArrowsMobile() {
         }
       },
       {
-        breakpoint: 380,
+        breakpoint: 400,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -122,7 +122,7 @@ function CustomArrowsMobile() {
   };
   
   return (
-    <div className="slider-container relative px-4 sm:px-8">
+    <div className="slider-container relative px-2 sm:px-6 md:px-8">
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
         <SkillCardMobile src="/React.png" alt="React" title="React" level="Expérimenté" />
         <SkillCardMobile src="/Tailwind.png" alt="Tailwind CSS" title="Tailwind CSS" level="Expérimenté" />

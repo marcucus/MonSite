@@ -57,13 +57,13 @@ const Navbar = () => {
                           <div className="relative flex h-16 items-center justify-between">
                               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                   {/* Mobile menu button*/}
-                                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-3 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                       <span className="absolute -inset-0.5" />
                                       <span className="sr-only">Open main menu</span>
                                       {open ? (
-                                          <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                                          <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
                                       ) : (
-                                          <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                                          <Bars3Icon className="block h-7 w-7" aria-hidden="true" />
                                       )}
                                   </Disclosure.Button>
                               </div>
@@ -186,13 +186,13 @@ const Navbar = () => {
                       </div>
 
                       <Disclosure.Panel className="sm:hidden">
-                          <div className="space-y-2 px-4 pb-4 pt-3">
+                          <div className="space-y-1 px-4 pb-4 pt-3">
 
                               <Disclosure.Button
                                   as="a"
                                   href='/'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-4 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Accueil
@@ -202,7 +202,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#apropos'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-4 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   A propos
@@ -212,7 +212,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#competences'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-4 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Compétences
@@ -222,7 +222,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#experience'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-4 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Expérience
@@ -232,7 +232,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#projets'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-4 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Projets
@@ -242,7 +242,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#contact'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-4 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Contact

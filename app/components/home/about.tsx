@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     <>
-      <div id="apropos" className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-8 sm:p-12 lg:p-16 xl:p-20 pt-20 sm:pt-24 lg:pt-0 relative overflow-hidden">
+      <div id="apropos" className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-6 sm:p-8 lg:p-16 xl:p-20 pt-16 sm:pt-20 lg:pt-0 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/10 to-accent-900/10"></div>
         
@@ -41,26 +41,26 @@ const About = () => {
         >
           <div className='block space-y-8'>
             {/* Section Header */}
-            <motion.div variants={fadeInUp} className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
+            <motion.div variants={fadeInUp} className="space-y-3 px-2 sm:px-0">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-4 sm:mb-6">
                 <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
-                <span className='text-sm sm:text-base font-bold text-accent-400 tracking-wider'>À PROPOS</span>
+                <span className='text-xs sm:text-sm lg:text-base font-bold text-accent-400 tracking-wider'>À PROPOS</span>
               </div>
               
-              <h2 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
                 Adrien Marques
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto sm:mx-0"></div>
+              <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto sm:mx-0"></div>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="space-y-6">
-              <p className='font-normal text-gray-300 normal-case text-lg sm:text-xl lg:text-2xl leading-relaxed'>
+            <motion.div variants={fadeInUp} className="space-y-5 sm:space-y-6">
+              <p className='font-normal text-gray-300 normal-case text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed px-2 sm:px-0'>
                 Développeur Full-Stack basé en région Parisienne, spécialisé dans la création 
                 d&apos;applications web modernes et performantes. Ma passion pour l&apos;innovation 
                 technologique me pousse à explorer constamment de nouvelles solutions.
               </p>
               
-              <p className='font-normal text-gray-400 normal-case text-base sm:text-lg lg:text-xl leading-relaxed'>
+              <p className='font-normal text-gray-400 normal-case text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed px-2 sm:px-0'>
                 J&apos;accompagne mes clients dans la digitalisation de leurs projets, de la conception 
                 à la mise en production, en optimisant les performances et le SEO pour garantir 
                 une expérience utilisateur exceptionnelle.
