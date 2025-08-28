@@ -28,39 +28,39 @@ const About = () => {
 
   return (
     <>
-      <div className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-6 sm:p-10 lg:p-16 xl:p-20 pt-16 sm:pt-20 lg:pt-0 relative overflow-hidden">
+      <div id="apropos" className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-6 sm:p-8 lg:p-16 xl:p-20 pt-16 sm:pt-20 lg:pt-0 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/10 to-accent-900/10"></div>
         
         <motion.div 
-          className='flex uppercase justify-center items-center content-center relative z-10 max-w-2xl'
+          className='flex uppercase justify-center items-center content-center relative z-10 max-w-3xl'
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className='block space-y-6'>
+          <div className='block space-y-8'>
             {/* Section Header */}
-            <motion.div variants={fadeInUp} className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-4">
+            <motion.div variants={fadeInUp} className="space-y-3 px-2 sm:px-0">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-4 sm:mb-6">
                 <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
-                <span className='text-sm font-bold text-accent-400 tracking-wider'>À PROPOS</span>
+                <span className='text-xs sm:text-sm lg:text-base font-bold text-accent-400 tracking-wider'>À PROPOS</span>
               </div>
               
-              <h2 className={`text-2xl sm:text-3xl xl:text-4xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
                 Adrien Marques
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto sm:mx-0"></div>
+              <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto sm:mx-0"></div>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="space-y-4">
-              <p className='font-normal text-gray-300 normal-case text-base sm:text-lg leading-relaxed'>
+            <motion.div variants={fadeInUp} className="space-y-5 sm:space-y-6">
+              <p className='font-normal text-gray-300 normal-case text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed px-2 sm:px-0'>
                 Développeur Full-Stack basé en région Parisienne, spécialisé dans la création 
                 d&apos;applications web modernes et performantes. Ma passion pour l&apos;innovation 
                 technologique me pousse à explorer constamment de nouvelles solutions.
               </p>
               
-              <p className='font-normal text-gray-400 normal-case text-sm sm:text-base leading-relaxed'>
+              <p className='font-normal text-gray-400 normal-case text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed px-2 sm:px-0'>
                 J&apos;accompagne mes clients dans la digitalisation de leurs projets, de la conception 
                 à la mise en production, en optimisant les performances et le SEO pour garantir 
                 une expérience utilisateur exceptionnelle.
@@ -68,28 +68,28 @@ const About = () => {
             </motion.div>
 
             {/* Key Information Cards */}
-            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4">
-              <div className="glass p-4 rounded-xl space-y-2">
+            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6">
+              <div className="glass p-6 rounded-xl space-y-3">
                 <div className="flex items-center gap-3 text-primary-400">
                   <FaMapMarkerAlt />
-                  <span className="text-sm font-medium text-gray-300">Localisation</span>
+                  <span className="text-base font-medium text-gray-300">Localisation</span>
                 </div>
-                <p className="text-white font-semibold">Région Parisienne</p>
+                <p className="text-white font-semibold text-lg">Région Parisienne</p>
               </div>
               
-              <div className="glass p-4 rounded-xl space-y-2">
+              <div className="glass p-6 rounded-xl space-y-3">
                 <div className="flex items-center gap-3 text-accent-400">
                   <FaCalendarAlt />
-                  <span className="text-sm font-medium text-gray-300">Expérience</span>
+                  <span className="text-base font-medium text-gray-300">Expérience</span>
                 </div>
-                <p className="text-white font-semibold">3+ années</p>
+                <p className="text-white font-semibold text-lg">3+ années</p>
               </div>
             </motion.div>
 
             {/* Specialties */}
-            <motion.div variants={fadeInUp} className="space-y-3">
-              <h3 className="text-lg font-semibold text-primary-400 normal-case">Spécialités</h3>
-              <div className="flex flex-wrap gap-2">
+            <motion.div variants={fadeInUp} className="space-y-4">
+              <h3 className="text-xl font-semibold text-primary-400 normal-case">Spécialités</h3>
+              <div className="flex flex-wrap gap-3">
                 {[
                   'Développement Full-Stack',
                   'Optimisation SEO',
@@ -101,7 +101,7 @@ const About = () => {
                   <motion.span
                     key={specialty}
                     variants={fadeInUp}
-                    className="px-3 py-1 bg-gradient-to-r from-primary-600/20 to-accent-600/20 text-primary-300 text-sm rounded-full border border-primary-500/30"
+                    className="px-4 py-2 bg-gradient-to-r from-primary-600/20 to-accent-600/20 text-primary-300 text-sm sm:text-base rounded-full border border-primary-500/30"
                   >
                     {specialty}
                   </motion.span>
@@ -110,31 +110,31 @@ const About = () => {
             </motion.div>
 
             {/* Contact Info */}
-            <motion.div variants={fadeInUp} className="glass p-6 rounded-xl space-y-4">
-              <h3 className="text-lg font-semibold text-white normal-case">Contact Professionnel</h3>
-              <div className="space-y-3">
+            <motion.div variants={fadeInUp} className="glass p-8 rounded-xl space-y-6">
+              <h3 className="text-xl font-semibold text-white normal-case">Contact Professionnel</h3>
+              <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <HiMail className="text-primary-400" />
-                  <span className="text-gray-300 text-sm">Disponible via formulaire de contact</span>
+                  <HiMail className="text-primary-400 text-xl" />
+                  <span className="text-gray-300 text-base">Disponible via formulaire de contact</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <FaGraduationCap className="text-accent-400" />
-                  <span className="text-gray-300 text-sm">Formation continue en technologies web</span>
+                  <FaGraduationCap className="text-accent-400 text-xl" />
+                  <span className="text-gray-300 text-base">Formation continue en technologies web</span>
                 </div>
               </div>
             </motion.div>
 
             {/* Download CV Button */}
-            <motion.div variants={fadeInUp} className="pt-4 flex justify-center sm:justify-start">
+            <motion.div variants={fadeInUp} className="pt-6 flex justify-center sm:justify-start">
               <motion.a 
                 href='../../CVMarquesAdrien.pdf' 
                 download 
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className='inline-flex items-center gap-3 bg-gradient-to-r from-accent-600 to-accent-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:shadow-glow-accent transition-all duration-300 group'
+                className='inline-flex items-center gap-4 bg-gradient-to-r from-accent-600 to-accent-500 text-white font-semibold px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:shadow-glow-accent transition-all duration-300 group'
               >
-                <FaDownload className="group-hover:animate-bounce" />
-                <span className="text-sm sm:text-base">Télécharger mon CV</span>
+                <FaDownload className="group-hover:animate-bounce text-lg" />
+                <span className="text-base sm:text-lg">Télécharger mon CV</span>
               </motion.a>
             </motion.div>
           </div>

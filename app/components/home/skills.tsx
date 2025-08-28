@@ -25,7 +25,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="bg-dark-800 py-12 px-6 lg:py-20 lg:px-20 relative overflow-hidden">
+    <div id="competences" className="bg-dark-800 py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
       <div className="absolute inset-0 bg-gradient-mesh opacity-10"></div>
@@ -38,19 +38,19 @@ const Skills = () => {
         className="max-w-6xl mx-auto relative z-10"
       >
         {/* Section Header */}
-        <motion.div variants={fadeInUp} className="text-center mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
+        <motion.div variants={fadeInUp} className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-4 sm:mb-6">
             <FaCogs className="text-primary-400" />
-            <span className='text-sm font-bold text-primary-400 uppercase tracking-wider'>Compétences Techniques</span>
+            <span className='text-xs sm:text-sm font-bold text-primary-400 uppercase tracking-wider'>Compétences Techniques</span>
           </div>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 lg:mb-8'>
             Mes <span className="text-gradient">Compétences</span>
           </h2>
-          <p className='text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-2'>
+          <p className='text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-3 sm:mb-4 px-4 sm:px-0'>
             Technologies et outils que je maîtrise pour créer des applications performantes
           </p>
           <div className="flex justify-center items-center">
-            <span className="text-accent-400 text-sm font-medium bg-accent-900/30 px-3 py-1 rounded-full">
+            <span className="text-accent-400 text-xs sm:text-sm lg:text-base font-medium bg-accent-900/30 px-3 sm:px-4 py-1 sm:py-2 rounded-full">
               En constante évolution
             </span>
           </div>
@@ -58,13 +58,13 @@ const Skills = () => {
 
         {/* Skills Carousel */}
         <motion.div variants={fadeInUp} className="flex justify-center items-center overflow-visible">
-          <div className="w-full max-w-4xl overflow-visible">
+          <div className="w-full max-w-5xl overflow-visible">
             {/* Desktop carousel */}
             <div className='hidden lg:block overflow-visible'>
               <CustomArrows/>
             </div> 
             {/* Mobile carousel */}
-            <div className='block lg:hidden overflow-visible'>
+            <div className='block lg:hidden overflow-visible px-1 sm:px-2'>
               <CustomArrowsMobile/>
             </div> 
           </div>
