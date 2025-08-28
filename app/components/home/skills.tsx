@@ -57,14 +57,14 @@ const Skills = () => {
         </motion.div>
 
         {/* Skills Carousel */}
-        <motion.div variants={fadeInUp} className="flex justify-center items-center">
-          <div className="w-full max-w-4xl">
+        <motion.div variants={fadeInUp} className="flex justify-center items-center overflow-visible">
+          <div className="w-full max-w-4xl overflow-visible">
             {/* Desktop carousel */}
-            <div className='hidden lg:block'>
+            <div className='hidden lg:block overflow-visible'>
               <CustomArrows/>
             </div> 
             {/* Mobile carousel */}
-            <div className='block lg:hidden'>
+            <div className='block lg:hidden overflow-visible'>
               <CustomArrowsMobile/>
             </div> 
           </div>

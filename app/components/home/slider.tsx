@@ -47,8 +47,8 @@ function SkillCard({ src, alt, title, level, width = 100, height = 100 }: {
   src: string, alt: string, title: string, level: string, width?: number, height?: number
 }) {
   return (
-    <div className="px-2">
-      <div className='card-modern p-6 w-[200px] h-[240px] gap-4 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
+    <div className="px-2 py-4">
+      <div className='card-modern p-6 w-[200px] h-[240px] gap-4 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300 relative z-10'>
         <div className="relative">
           <Image 
             src={src} 

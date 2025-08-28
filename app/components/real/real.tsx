@@ -84,8 +84,8 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
-        <div key={index} className="px-2 h-full">
-          <div className="card-modern p-6 flex flex-col gap-4 text-white h-[644px] group hover:scale-[1.02] transition-all duration-300"> 
+        <div key={index} className="px-2 py-4 h-full overflow-visible">
+          <div className="card-modern p-6 flex flex-col gap-4 text-white h-[644px] group hover:scale-[1.02] transition-all duration-300 relative z-10"> 
           <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : item.title.includes("LCF") ? lcf : forest} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-600 animate-shine mb-4'>
@@ -186,8 +186,8 @@ const CarouselMobile: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
-        <div key={index} className="px-2 h-full">
-          <div className="card-modern p-6 flex flex-col gap-4 text-white h-[644px] group hover:scale-[1.02] transition-all duration-300"> 
+        <div key={index} className="px-2 py-4 h-full overflow-visible">
+          <div className="card-modern p-6 flex flex-col gap-4 text-white h-[644px] group hover:scale-[1.02] transition-all duration-300 relative z-10"> 
           <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : item.title.includes("LCF") ? lcf : forest} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-600 animate-shine mb-4'>
@@ -287,8 +287,8 @@ const CarouselTab: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
-        <div key={index} className="px-2 h-full">
-          <div className="card-modern p-6 flex flex-col gap-4 text-white h-[644px] group hover:scale-[1.02] transition-all duration-300"> 
+        <div key={index} className="px-2 py-4 h-full overflow-visible">
+          <div className="card-modern p-6 flex flex-col gap-4 text-white h-[644px] group hover:scale-[1.02] transition-all duration-300 relative z-10"> 
           <Image src={item.title.includes("Dijoma") ? dijoma : item.title.includes("Foudroyer") ? ranking : item.title.includes("Bones") ? bones : item.title.includes("LCF") ? lcf : forest} alt={''} width={1314} height={929} className="h-96 w-full object-cover object-center rounded-xl"/>
             <div className='py-2 flex-grow'>
               <p className='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-400 to-primary-600 animate-shine mb-4'>
