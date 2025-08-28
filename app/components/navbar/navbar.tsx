@@ -115,7 +115,7 @@ const Navbar = () => {
                                               animate="visible"
                                               transition={{ duration: 0.6 }}
                                           >
-                                              <Link href='#apropos'>
+                                              <Link href='#competences'>
                                                   <button
                                                       className={classNames(
                                                           `text-gray-300 hover:bg-primary-600/30 hover:text-white rounded-xl px-4 py-2 text-[14px] 2xl:text-[20px] 2xl:-mt-1 font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase`
@@ -186,13 +186,13 @@ const Navbar = () => {
                       </div>
 
                       <Disclosure.Panel className="sm:hidden">
-                          <div className="space-y-1 px-2 pb-3 pt-2">
+                          <div className="space-y-2 px-4 pb-4 pt-3">
 
                               <Disclosure.Button
                                   as="a"
                                   href='/'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] xl:text-[18px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Accueil
@@ -202,7 +202,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#apropos'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   A propos
@@ -210,9 +210,9 @@ const Navbar = () => {
 
                               <Disclosure.Button
                                   as="a"
-                                  href='#apropos'
+                                  href='#competences'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Compétences
@@ -222,7 +222,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#experience'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Expérience
@@ -232,7 +232,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#projets'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Projets
@@ -242,7 +242,7 @@ const Navbar = () => {
                                   as="a"
                                   href='#contact'
                                   className={classNames(
-                                      'flex justify-center items-center content-center rounded-xl px-4 py-2 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[14px] font-normal transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
+                                      'flex justify-center items-center content-center rounded-xl px-6 py-3 text-base text-gray-300 hover:bg-primary-600/30 hover:text-white text-[16px] sm:text-[18px] font-medium transition-all duration-300 border border-transparent hover:border-primary-500/30 backdrop-blur-sm uppercase'
                                   )}
                               >
                                   Contact
