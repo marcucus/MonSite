@@ -13,14 +13,13 @@ const Page = () => {
       <Home />
 
       <div className="bg-dark-900 border-t-2 border-primary-800/50" id="apropos">
-        <div className="grid xl:grid-cols-3 2xl:grid-cols-3 md:p-20">
-          <span className="hidden xl:block xl:col-span-2 2xl:col-span-2">
+        <div className="grid xl:grid-cols-3 gap-0 md:p-20">
+          <div className="xl:col-span-2">
             <Skills />
-          </span>
-          <About />
-          <span className="xl:hidden">
-            <Skills />
-          </span>
+          </div>
+          <div className="xl:col-span-1">
+            <About />
+          </div>
         </div>
       </div>
 
