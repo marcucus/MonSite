@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     <>
-      <div className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-10 lg:p-16 xl:p-20 pt-20 lg:pt-0 relative overflow-hidden">
+      <div className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-6 sm:p-10 lg:p-16 xl:p-20 pt-16 sm:pt-20 lg:pt-0 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/10 to-accent-900/10"></div>
         
@@ -47,20 +47,20 @@ const About = () => {
                 <span className='text-sm font-bold text-accent-400 tracking-wider'>À PROPOS</span>
               </div>
               
-              <h2 className={`text-3xl xl:text-4xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
+              <h2 className={`text-2xl sm:text-3xl xl:text-4xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
                 Adrien Marques
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto sm:mx-0"></div>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="space-y-4">
-              <p className='font-normal text-gray-300 normal-case text-lg leading-relaxed'>
+              <p className='font-normal text-gray-300 normal-case text-base sm:text-lg leading-relaxed'>
                 Développeur Full-Stack basé en région Parisienne, spécialisé dans la création 
                 d&apos;applications web modernes et performantes. Ma passion pour l&apos;innovation 
                 technologique me pousse à explorer constamment de nouvelles solutions.
               </p>
               
-              <p className='font-normal text-gray-400 normal-case leading-relaxed'>
+              <p className='font-normal text-gray-400 normal-case text-sm sm:text-base leading-relaxed'>
                 J&apos;accompagne mes clients dans la digitalisation de leurs projets, de la conception 
                 à la mise en production, en optimisant les performances et le SEO pour garantir 
                 une expérience utilisateur exceptionnelle.
@@ -68,7 +68,7 @@ const About = () => {
             </motion.div>
 
             {/* Key Information Cards */}
-            <motion.div variants={fadeInUp} className="grid sm:grid-cols-2 gap-4 py-4">
+            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4">
               <div className="glass p-4 rounded-xl space-y-2">
                 <div className="flex items-center gap-3 text-primary-400">
                   <FaMapMarkerAlt />
@@ -125,16 +125,16 @@ const About = () => {
             </motion.div>
 
             {/* Download CV Button */}
-            <motion.div variants={fadeInUp} className="pt-4">
+            <motion.div variants={fadeInUp} className="pt-4 flex justify-center sm:justify-start">
               <motion.a 
                 href='../../CVMarquesAdrien.pdf' 
                 download 
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className='inline-flex items-center gap-3 bg-gradient-to-r from-accent-600 to-accent-500 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-glow-accent transition-all duration-300 group'
+                className='inline-flex items-center gap-3 bg-gradient-to-r from-accent-600 to-accent-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:shadow-glow-accent transition-all duration-300 group'
               >
                 <FaDownload className="group-hover:animate-bounce" />
-                <span>Télécharger mon CV</span>
+                <span className="text-sm sm:text-base">Télécharger mon CV</span>
               </motion.a>
             </motion.div>
           </div>
