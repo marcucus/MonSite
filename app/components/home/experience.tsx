@@ -20,21 +20,36 @@ const Experience = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      title: "Lead et Développeur Full Stack",
-      company: "Datakeen",
-      period: "Mars 2025 - Présent",
+      title: "Développeur Full Stack Freelance",
+      company: "Auto-entrepreneur",
+      period: "2023 - Présent",
       type: "work",
       description: [
-        "Direction technique et développement d'applications web modernes",
-        "Architecture et développement avec React/Next.js et technologies backend",
-        "Encadrement d'équipe et coordination de projets",
-        "Optimisation des performances et mise en place de bonnes pratiques"
+        "Développement d'applications web sur mesure pour diverses entreprises",
+        "Architecture et développement avec React/Next.js et PHP/Symfony",
+        "Création de sites vitrines et d'applications métier performantes",
+        "Optimisation SEO et performance web pour améliorer la visibilité"
       ],
-      technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
+      technologies: ["React", "Next.js", "TypeScript", "PHP", "Symfony", "MySQL", "Docker"],
       icon: <FaBriefcase />
     },
     {
       id: 2,
+      title: "Développeur Web Full Stack",
+      company: "Projets Clients Variés",
+      period: "2022 - 2023",
+      type: "work",
+      description: [
+        "Développement de LCF Auto Performance - Site vitrine avec React/Next.js",
+        "Création du site Dijoma avec intégration sur Netlify",
+        "Développement de Forestria - Application de randonnées avec Symfony",
+        "Maintenance et évolution d'applications existantes"
+      ],
+      technologies: ["React", "Next.js", "Symfony", "Firebase", "Netlify", "MySQL"],
+      icon: <FaBriefcase />
+    },
+    {
+      id: 3,
       title: "Développeur Web",
       company: "Foudroyer.com",
       period: "2021 - 2022",
@@ -49,7 +64,7 @@ const Experience = () => {
       icon: <FaBriefcase />
     },
     {
-      id: 3,
+      id: 4,
       title: "Formation Développeur Web",
       company: "Formation Autodidacte",
       period: "2020 - 2021",
@@ -67,19 +82,19 @@ const Experience = () => {
 
   const certifications = [
     {
-      name: "JavaScript ES6+",
-      issuer: "Formation Continue",
-      year: "2022"
-    },
-    {
-      name: "React Advanced Patterns",
+      name: "React et Next.js",
       issuer: "Formation Continue",
       year: "2023"
     },
     {
-      name: "Symfony Certification",
+      name: "PHP et Symfony",
       issuer: "Formation Continue",
       year: "2022"
+    },
+    {
+      name: "JavaScript ES6+",
+      issuer: "Formation Continue",
+      year: "2021"
     }
   ];
 
