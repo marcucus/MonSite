@@ -10,8 +10,8 @@ const Footer = () => {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary-900/10 to-accent-900/10"></div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
           
           {/* Copyright section */}
           <div className="text-center md:text-left">
@@ -24,18 +24,18 @@ const Footer = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <span className="text-gray-400 text-sm hidden md:block">Suivez-moi :</span>
-            <div className="flex gap-3">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <span className="text-gray-400 text-xs sm:text-sm hidden md:block">Suivez-moi :</span>
+            <div className="flex gap-2 sm:gap-3">
               <motion.a 
                 href='https://www.linkedin.com/in/adrien-marques-755393181/' 
                 target='_blank' 
                 rel='noopener noreferrer'
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 glass rounded-lg hover:bg-primary-500/20 transition-all duration-300 group"
+                className="p-2 sm:p-3 glass rounded-lg hover:bg-primary-500/20 transition-all duration-300 group"
               >
-                <FaLinkedin className='text-gray-300 w-5 h-5 group-hover:text-primary-400 transition-colors' />
+                <FaLinkedin className='text-gray-300 w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-400 transition-colors' />
               </motion.a>
               <motion.a 
                 href='https://github.com/marcucus' 
@@ -43,9 +43,9 @@ const Footer = () => {
                 rel='noopener noreferrer'
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 glass rounded-lg hover:bg-primary-500/20 transition-all duration-300 group"
+                className="p-2 sm:p-3 glass rounded-lg hover:bg-primary-500/20 transition-all duration-300 group"
               >
-                <FaGithubSquare className='text-gray-300 w-5 h-5 group-hover:text-primary-400 transition-colors' />
+                <FaGithubSquare className='text-gray-300 w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-400 transition-colors' />
               </motion.a>
             </div>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         {/* Separator line */}
-        <div className="mt-6 pt-6 border-t border-gray-700/50 text-center">
+        <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-700/50 text-center">
           <p className="text-gray-500 text-xs">
             Tous droits réservés • Développé avec Next.js & TypeScript
           </p>

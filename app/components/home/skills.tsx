@@ -25,7 +25,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="competences" className="bg-dark-800 py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-20 relative overflow-hidden">
+    <div id="competences" className="bg-dark-800 py-8 px-4 sm:py-12 sm:px-6 md:py-16 md:px-8 lg:py-20 lg:px-12 xl:py-24 xl:px-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
       <div className="absolute inset-0 bg-gradient-mesh opacity-10"></div>
@@ -38,12 +38,12 @@ const Skills = () => {
         className="max-w-6xl mx-auto relative z-10"
       >
         {/* Section Header */}
-        <motion.div variants={fadeInUp} className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-4 sm:mb-6">
+        <motion.div variants={fadeInUp} className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-3 sm:mb-4 md:mb-6">
             <FaCogs className="text-primary-400" />
-            <span className='text-xs sm:text-sm font-bold text-primary-400 uppercase tracking-wider'>Compétences Techniques</span>
+            <span className='text-xs sm:text-sm lg:text-base font-bold text-primary-400 uppercase tracking-wider'>Compétences Techniques</span>
           </div>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 lg:mb-8'>
+          <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8'>
             Mes <span className="text-gradient">Compétences</span>
           </h2>
           <p className='text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-3 sm:mb-4 px-4 sm:px-0'>
@@ -63,8 +63,8 @@ const Skills = () => {
             <div className='hidden lg:block overflow-visible'>
               <CustomArrows/>
             </div> 
-            {/* Mobile carousel */}
-            <div className='block lg:hidden overflow-visible px-1 sm:px-2'>
+            {/* Mobile/Tablet carousel */}
+            <div className='block lg:hidden overflow-visible px-2 sm:px-4'>
               <CustomArrowsMobile/>
             </div> 
           </div>

@@ -110,7 +110,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <div className='relative block sm:grid sm:grid-cols-2 p-10 lg:p-20 2xl:w-[80%] justify-center items-center content-center min-h-screen z-10'>
+        <div className='relative block lg:grid lg:grid-cols-2 p-4 sm:p-6 md:p-8 lg:p-16 xl:p-20 2xl:w-[80%] justify-center items-center content-center min-h-screen z-10 gap-8 lg:gap-12'>
           <motion.div
             variants={anim}
             initial="hidden"
@@ -123,7 +123,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-primary-300 font-medium text-sm"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full text-primary-300 font-medium text-xs sm:text-sm"
             >
               <HiSparkles className="text-accent-400" />
               <span className="uppercase tracking-wider">Développeur Full-Stack</span>
@@ -135,10 +135,10 @@ const Home = () => {
               animate="visible"
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className='text-lg font-medium text-gray-400 uppercase tracking-wider mb-2'>
+              <p className='text-sm sm:text-lg font-medium text-gray-400 uppercase tracking-wider mb-2'>
                 Qui suis-je ?
               </p>
-              <h1 className={`${font.className} text-4xl md:text-5xl lg:text-6xl font-bold text-gradient bg-gradient-to-r from-primary-400 via-accent-400 to-primary-300 bg-clip-text text-transparent leading-tight normal-case`}>
+              <h1 className={`${font.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient bg-gradient-to-r from-primary-400 via-accent-400 to-primary-300 bg-clip-text text-transparent leading-tight normal-case`}>
                 Adrien Marques
               </h1>
             </motion.div>
@@ -148,7 +148,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.8, delay: 0.6 }}
-              className='text-lg md:text-xl font-normal text-gray-300 normal-case leading-relaxed max-w-2xl'
+              className='text-base sm:text-lg md:text-xl font-normal text-gray-300 normal-case leading-relaxed max-w-2xl'
             >
               Développeur Full-Stack passionné par l&apos;innovation technologique.
               Je conçois et développe des applications web modernes qui offrent des 
@@ -163,26 +163,26 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row items-center gap-6"
             >
-              <div className="flex items-center gap-4">
-                <span className='text-gray-400 text-sm font-medium'>Suivez-moi :</span>
-                <div className='flex gap-3'>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+                <span className='text-gray-400 text-xs sm:text-sm font-medium'>Suivez-moi :</span>
+                <div className='flex gap-2 sm:gap-3'>
                   <motion.a 
                     href='https://www.linkedin.com/in/adrien-marques-755393181/' 
                     target='_blank'
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-3 glass rounded-full hover:bg-primary-500/20 transition-all duration-300 group"
+                    className="p-2 sm:p-3 glass rounded-full hover:bg-primary-500/20 transition-all duration-300 group"
                   >
-                    <FaLinkedin className='text-gray-300 w-6 h-6 group-hover:text-primary-400 transition-colors' />
+                    <FaLinkedin className='text-gray-300 w-5 h-5 sm:w-6 sm:h-6 group-hover:text-primary-400 transition-colors' />
                   </motion.a>
                   <motion.a 
                     href='https://github.com/marcucus' 
                     target='_blank'
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-3 glass rounded-full hover:bg-primary-500/20 transition-all duration-300 group"
+                    className="p-2 sm:p-3 glass rounded-full hover:bg-primary-500/20 transition-all duration-300 group"
                   >
-                    <FaGithubSquare className='text-gray-300 w-6 h-6 group-hover:text-primary-400 transition-colors' />
+                    <FaGithubSquare className='text-gray-300 w-5 h-5 sm:w-6 sm:h-6 group-hover:text-primary-400 transition-colors' />
                   </motion.a>
                 </div>
               </div>
@@ -191,7 +191,7 @@ const Home = () => {
                 href="#apropos"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-full hover:shadow-glow transition-all duration-300"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold text-sm sm:text-base rounded-full hover:shadow-glow transition-all duration-300 mt-4 sm:mt-0"
               >
                 <span>Découvrir mon profil</span>
                 <FaArrowDown className="text-sm" />
@@ -204,24 +204,24 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.8, delay: 1 }}
-              className="flex items-center gap-8 pt-6"
+              className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 sm:gap-8 pt-6"
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-400">5+</div>
-                <div className="text-sm text-gray-400">Projets</div>
+                <div className="text-xl sm:text-2xl font-bold text-primary-400">5+</div>
+                <div className="text-xs sm:text-sm text-gray-400">Projets</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent-400">3+</div>
-                <div className="text-sm text-gray-400">Années d&apos;expérience</div>
+                <div className="text-xl sm:text-2xl font-bold text-accent-400">3+</div>
+                <div className="text-xs sm:text-sm text-gray-400">Années d&apos;expérience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-300">10+</div>
-                <div className="text-sm text-gray-400">Technologies</div>
+                <div className="text-xl sm:text-2xl font-bold text-primary-300">10+</div>
+                <div className="text-xs sm:text-sm text-gray-400">Technologies</div>
               </div>
             </motion.div>
           </motion.div>
           
-          <div className='relative flex justify-center items-center mt-10 sm:mt-0'>
+          <div className='relative flex justify-center items-center mt-8 sm:mt-10 lg:mt-0'>
             <motion.div
               variants={animX}
               initial="hidden"
@@ -241,9 +241,9 @@ const Home = () => {
                 <Image 
                   src={fond} 
                   alt='Adrien Marques - Développeur Full-Stack' 
-                  height={500} 
-                  width={500}
-                  className="relative z-10 drop-shadow-2xl animate-float"
+                  height={400} 
+                  width={400}
+                  className="relative z-10 drop-shadow-2xl animate-float w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px]"
                   priority
                 />
               </motion.div>
