@@ -398,20 +398,20 @@ const Real = () => {
   ];
 
   return (
-    <div className="py-20 px-10 lg:px-20 relative overflow-hidden bg-dark-800">
+    <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-20 relative overflow-hidden bg-dark-800">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
       
       <div className='flex justify-center content-center items-center relative z-10 max-w-6xl mx-auto'>
-        <div className="text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
+        <div className="text-center space-y-4 sm:space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-4 sm:mb-6">
             <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
-            <span className='text-sm font-bold text-accent-400 uppercase tracking-wider'>Portfolio</span>
+            <span className='text-xs sm:text-sm font-bold text-accent-400 uppercase tracking-wider'>Portfolio</span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6'>
             Mes <span className="text-gradient">Projets</span>
           </h2>
-          <p className='text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12'>
+          <p className='text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12 px-4 sm:px-0'>
             Mes réalisations et les projets où je suis intervenu
           </p>
         </div>

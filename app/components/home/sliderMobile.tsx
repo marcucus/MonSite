@@ -58,8 +58,8 @@ function SkillCardMobile({ src, alt, title, level }: {
   const displayLevel = levelAbbreviations[level as keyof typeof levelAbbreviations] || level;
 
   return (
-    <div className="px-1 sm:px-2">
-      <div className='card-modern p-3 sm:p-4 w-[150px] sm:w-[160px] h-[170px] sm:h-[180px] gap-2 sm:gap-3 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
+    <div className="px-1">
+      <div className='card-modern p-3 sm:p-4 md:p-5 w-[140px] sm:w-[160px] md:w-[180px] h-[160px] sm:h-[180px] md:h-[200px] gap-2 sm:gap-3 flex flex-col justify-center items-center group hover:shadow-glow transition-all duration-300'>
         <div className="relative">
           <Image 
             src={src} 
@@ -105,14 +105,14 @@ function CustomArrowsMobile() {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
       },
       {
-        breakpoint: 400,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -122,7 +122,7 @@ function CustomArrowsMobile() {
   };
   
   return (
-    <div className="slider-container relative px-2 sm:px-6 md:px-8">
+    <div className="slider-container relative px-1 sm:px-3 md:px-6">
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
         <SkillCardMobile src="/React.png" alt="React" title="React" level="Expérimenté" />
         <SkillCardMobile src="/Tailwind.png" alt="Tailwind CSS" title="Tailwind CSS" level="Expérimenté" />

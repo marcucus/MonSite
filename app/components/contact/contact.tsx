@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-dark-800 py-20 px-10 lg:px-20 relative overflow-hidden">
+    <div className="bg-dark-800 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
       <div className="absolute inset-0 bg-gradient-mesh opacity-10"></div>
@@ -62,22 +62,22 @@ const Contact = () => {
         className="max-w-4xl mx-auto relative z-10"
       >
         {/* Section Header */}
-        <motion.div variants={fadeInUp} className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
+        <motion.div variants={fadeInUp} className="text-center mb-8 sm:mb-10 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-4 sm:mb-6">
             <FaCommentDots className="text-primary-400" />
-            <span className='text-sm font-bold text-primary-400 uppercase tracking-wider'>Contact</span>
+            <span className='text-xs sm:text-sm font-bold text-primary-400 uppercase tracking-wider'>Contact</span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6'>
             Contactez-<span className="text-gradient">moi</span>
           </h2>
-          <p className='text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed'>
+          <p className='text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0'>
             Si vous avez des questions ou des projets en tête, n&apos;hésitez pas à me contacter.
           </p>
         </motion.div>
 
         {/* Contact Form */}
-        <motion.div variants={fadeInUp} className="card-modern p-8">
-          <div className="space-y-6">
+        <motion.div variants={fadeInUp} className="card-modern p-4 sm:p-6 md:p-8">
+          <div className="space-y-4 sm:space-y-6">
             {/* Name Field */}
             <div className="space-y-2">
               <label 
@@ -93,7 +93,7 @@ const Contact = () => {
                 type="text" 
                 name="name" 
                 id="name" 
-                className="w-full p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300" 
+                className="w-full p-3 sm:p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 text-sm sm:text-base" 
                 placeholder="Votre nom complet"
                 value={name} 
                 required 
@@ -125,7 +125,7 @@ const Contact = () => {
                 type="email" 
                 name="email" 
                 id="email" 
-                className="w-full p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300" 
+                className="w-full p-3 sm:p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 text-sm sm:text-base" 
                 placeholder="votre.email@exemple.com"
                 value={email} 
                 required 
@@ -156,8 +156,8 @@ const Contact = () => {
               <textarea 
                 id="message" 
                 name="message" 
-                rows={6} 
-                className="w-full p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 resize-none" 
+                rows={5} 
+                className="w-full p-3 sm:p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 resize-none text-sm sm:text-base" 
                 placeholder="Décrivez votre projet ou votre question..."
                 value={message} 
                 required 
@@ -185,7 +185,7 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className={`
-                w-full flex items-center justify-center gap-3 px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300
+                w-full flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-white transition-all duration-300 text-sm sm:text-base
                 ${isSending 
                   ? 'bg-gray-600 cursor-not-allowed' 
                   : 'bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 hover:shadow-glow'
