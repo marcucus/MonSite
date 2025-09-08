@@ -241,9 +241,9 @@ const Home = () => {
                 <Image 
                   src={fond} 
                   alt='Adrien Marques - Développeur Full-Stack' 
-                  height={400} 
-                  width={400}
-                  className="relative z-10 drop-shadow-2xl animate-float w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px]"
+                  height={496} 
+                  width={700}
+                  className="relative z-10 drop-shadow-2xl animate-float w-[300px] h-[212px] sm:w-[400px] sm:h-[283px] lg:w-[450px] lg:h-[318px] xl:w-[500px] xl:h-[354px] object-contain"
                   priority
                 />
               </motion.div>

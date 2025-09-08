@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import Image from 'next/image';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function SampleNextArrow(props: any) {
@@ -84,11 +82,34 @@ function CustomArrows() {
     dotsClass: "slick-dots !bottom-[-50px]",
     customPaging: () => (
       <div className="w-3 h-3 rounded-full bg-gray-600 hover:bg-primary-400 transition-colors duration-300"></div>
-    )
+    ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
   
   return (
-    <div className="slider-container relative">
+    <div className="slider-container relative px-4 sm:px-8 md:px-12 overflow-visible">
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
         <SkillCard src="/React.png" alt="React" title="React" level="Expérimenté" />
         <SkillCard src="/Tailwind.png" alt="Tailwind CSS" title="Tailwind CSS" level="Expérimenté" />
