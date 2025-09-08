@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import Image from 'next/image';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function SampleNextArrow(props: any) {
@@ -105,7 +103,7 @@ function CustomArrowsMobile() {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -122,7 +120,7 @@ function CustomArrowsMobile() {
   };
   
   return (
-    <div className="slider-container relative px-1 sm:px-3 md:px-6">
+    <div className="slider-container relative px-2 sm:px-4 md:px-6 overflow-visible">
       <Slider ref={slider => { sliderRef.current = slider }} {...settings}>
         <SkillCardMobile src="/React.png" alt="React" title="React" level="Expérimenté" />
         <SkillCardMobile src="/Tailwind.png" alt="Tailwind CSS" title="Tailwind CSS" level="Expérimenté" />

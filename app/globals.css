@@ -163,6 +163,83 @@ html {
   border-color: rgba(59, 130, 246, 0.3);
 }
 
+/* Fix slider display issues */
+.slider-container .slick-slider {
+  position: relative;
+}
+
+.slider-container .slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.slider-container .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  outline: none;
+}
+
+.slider-container .slick-slide > div {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+}
+
+/* Override Tailwind display settings for slick */
+.slider-container .slick-list {
+  overflow: hidden !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.slider-container .slick-track {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  display: flex !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.slider-container .slick-slide {
+  float: none !important;
+  height: inherit !important;
+  min-height: 1px !important;
+  display: flex !important;
+}
+
+/* Fix dots positioning */
+.slider-container .slick-dots {
+  bottom: -50px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+
+.slider-container .slick-dots li {
+  margin: 0 4px;
+}
+
+.slider-container .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ensure proper arrow positioning */
+.slider-container .slick-prev,
+.slider-container .slick-next {
+  z-index: 1000;
+}
+
 /* Smooth transitions for all interactive elements */
 button, a, .interactive {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
