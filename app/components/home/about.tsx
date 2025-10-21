@@ -28,14 +28,12 @@ const About = () => {
 
   return (
     <>
-      <div id="apropos" className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-6 sm:p-8 lg:p-12 xl:p-16 pt-16 sm:pt-20 lg:pt-0 relative overflow-hidden">
-        {/* Background decoration with liquid blobs */}
-        <div className="absolute inset-0 bg-gradient-mesh opacity-15"></div>
-        <div className="absolute top-10 right-20 w-64 h-64 bg-primary-500/20 liquid-blob blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-accent-500/20 liquid-blob blur-3xl" style={{ animationDelay: '3s' }}></div>
+      <div id="apropos" className="flex w-full justify-center content-center text-center sm:text-start bg-dark-900 items-center p-6 sm:p-8 lg:p-16 xl:p-20 pt-16 sm:pt-20 lg:pt-0 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/10 to-accent-900/10"></div>
         
         <motion.div 
-          className='flex uppercase justify-center items-center content-center relative z-10 max-w-4xl'
+          className='flex uppercase justify-center items-center content-center relative z-10 max-w-3xl'
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -44,68 +42,66 @@ const About = () => {
           <div className='block space-y-8'>
             {/* Section Header */}
             <motion.div variants={fadeInUp} className="space-y-3 px-2 sm:px-0">
-              <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 liquid-glass rounded-full mb-4 sm:mb-6">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-4 sm:mb-6">
                 <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
-                <span className='text-xs sm:text-sm lg:text-base font-bold text-accent-300 tracking-wider'>À PROPOS</span>
+                <span className='text-xs sm:text-sm lg:text-base font-bold text-accent-400 tracking-wider'>À PROPOS</span>
               </div>
               
-              <h2 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-wide normal-case text-white ${font.className} leading-tight mb-4`}>
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-wide normal-case text-white ${font.className} leading-tight`}>
                 Adrien Marques
               </h2>
-              <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-primary-400 via-accent-400 to-primary-500 rounded-full mx-auto sm:mx-0"></div>
+              <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto sm:mx-0"></div>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="space-y-5 sm:space-y-6">
-              <p className='font-normal text-gray-200 normal-case text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed px-2 sm:px-0'>
-                Après un parcours académique rigoureux, incluant un Master en Informatique à 
-                l&apos;Université de Franche-Comté, notre équipe chez Ennea a développé la 
-                marketplace « Bones », bénéficiant de mon expertise en optimisation pour les 
-                moteurs de recherche (SEO) et ma maîtrise en développement logiciel.
+              <p className='font-normal text-gray-300 normal-case text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed px-2 sm:px-0'>
+                Développeur Full-Stack basé en région Parisienne, spécialisé dans la création 
+                d&apos;applications web modernes et performantes. Ma passion pour l&apos;innovation 
+                technologique me pousse à explorer constamment de nouvelles solutions.
               </p>
               
-              <p className='font-normal text-gray-300 normal-case text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed px-2 sm:px-0'>
-                Passionné par l&apos;innovation et l&apos;amélioration continue, j&apos;ai contribué 
-                à la création d&apos;outils de suivi de performance chez Foudroyer, renforçant 
-                l&apos;expérience utilisateur et la visibilité en ligne grâce à des solutions 
-                technologiques avancées et une approche méthodique et autonome.
+              <p className='font-normal text-gray-400 normal-case text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed px-2 sm:px-0'>
+                J&apos;accompagne mes clients dans la digitalisation de leurs projets, de la conception 
+                à la mise en production, en optimisant les performances et le SEO pour garantir 
+                une expérience utilisateur exceptionnelle.
               </p>
             </motion.div>
 
-            {/* Key Information Cards with liquid glass */}
+            {/* Key Information Cards */}
             <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6">
-              <div className="liquid-glass-hover liquid-glass p-6 rounded-2xl space-y-3">
+              <div className="glass p-6 rounded-xl space-y-3">
                 <div className="flex items-center gap-3 text-primary-400">
-                  <FaMapMarkerAlt className="text-xl" />
-                  <span className="text-base font-medium text-gray-200">Localisation</span>
+                  <FaMapMarkerAlt />
+                  <span className="text-base font-medium text-gray-300">Localisation</span>
                 </div>
-                <p className="text-white font-semibold text-lg">Mitry-Mory, Île-de-France</p>
+                <p className="text-white font-semibold text-lg">Région Parisienne</p>
               </div>
               
-              <div className="liquid-glass-hover liquid-glass p-6 rounded-2xl space-y-3">
+              <div className="glass p-6 rounded-xl space-y-3">
                 <div className="flex items-center gap-3 text-accent-400">
-                  <FaCalendarAlt className="text-xl" />
-                  <span className="text-base font-medium text-gray-200">Expérience</span>
+                  <FaCalendarAlt />
+                  <span className="text-base font-medium text-gray-300">Expérience</span>
                 </div>
-                <p className="text-white font-semibold text-lg">5+ années</p>
+                <p className="text-white font-semibold text-lg">3+ années</p>
               </div>
             </motion.div>
 
             {/* Specialties */}
             <motion.div variants={fadeInUp} className="space-y-4">
-              <h3 className="text-xl font-semibold text-primary-300 normal-case">Principales compétences</h3>
+              <h3 className="text-xl font-semibold text-primary-400 normal-case">Spécialités</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  'Application mobile',
-                  'React Native',
-                  'Python',
                   'Développement Full-Stack',
                   'Optimisation SEO',
-                  'Architecture Web'
+                  'Architecture Web',
+                  'Tests & Débogage',
+                  'Responsive Design',
+                  'Performance Web'
                 ].map((specialty, index) => (
                   <motion.span
                     key={specialty}
                     variants={fadeInUp}
-                    className="px-4 py-2.5 liquid-glass text-primary-200 text-sm sm:text-base rounded-xl border border-primary-400/30 hover:border-primary-400/60 transition-all duration-300"
+                    className="px-4 py-2 bg-gradient-to-r from-primary-600/20 to-accent-600/20 text-primary-300 text-sm sm:text-base rounded-full border border-primary-500/30"
                   >
                     {specialty}
                   </motion.span>
@@ -114,16 +110,16 @@ const About = () => {
             </motion.div>
 
             {/* Contact Info */}
-            <motion.div variants={fadeInUp} className="liquid-glass p-6 sm:p-8 rounded-2xl space-y-6">
+            <motion.div variants={fadeInUp} className="glass p-8 rounded-xl space-y-6">
               <h3 className="text-xl font-semibold text-white normal-case">Contact Professionnel</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <HiMail className="text-primary-400 text-xl" />
-                  <span className="text-gray-200 text-base">marquesadrien.pro@gmail.com</span>
+                  <span className="text-gray-300 text-base">Disponible via formulaire de contact</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <FaGraduationCap className="text-accent-400 text-xl" />
-                  <span className="text-gray-200 text-base">Master en Informatique - Université de Franche-Comté</span>
+                  <span className="text-gray-300 text-base">Formation continue en technologies web</span>
                 </div>
               </div>
             </motion.div>
@@ -135,7 +131,7 @@ const About = () => {
                 download 
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className='inline-flex items-center gap-4 bg-gradient-to-r from-accent-500 via-accent-400 to-primary-500 text-white font-semibold px-8 sm:px-10 py-4 sm:py-5 rounded-2xl hover:shadow-glow-accent-lg transition-all duration-300 group liquid-glass-hover'
+                className='inline-flex items-center gap-4 bg-gradient-to-r from-accent-600 to-accent-500 text-white font-semibold px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:shadow-glow-accent transition-all duration-300 group'
               >
                 <FaDownload className="group-hover:animate-bounce text-lg" />
                 <span className="text-base sm:text-lg">Télécharger mon CV</span>
