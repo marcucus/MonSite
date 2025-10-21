@@ -1,0 +1,119 @@
+Coordonnées
+marquesadrien.pro@gmail.com
+                               Adrien Marques
+                               Fullstack developer
+www.linkedin.com/in/adrien-    Mitry-Mory, Île-de-France, France
+marques-755393181 (LinkedIn)
+
+                               Résumé
+Principales compétences
+Application mobile             Après un parcours académique rigoureux, incluant un Master en
+React Native                   Informatique à l'Université de Franche-Comté, notre équipe chez
+Python                         Ennea a développé la marketplace « Bones », bénéficiant de mon
+                               expertise en optimisation pour les moteurs de recherche (SEO) et
+                               ma maîtrise en développement logiciel.
+
+
+                               Passionné par l'innovation et l'amélioration continue, j'ai contribué
+                               à la création d'outils de suivi de performance chez Foudroyer,
+                               renforçant l'expérience utilisateur et la visibilité en ligne grâce à des
+                               solutions technologiques avancées et une approche méthodique et
+                               autonome.
+
+
+                               https://marquesadrien.vercel.app/
+                               https://github.com/marcucus/
+
+
+
+                               Expérience
+                               Ennea
+                               6 mois
+
+                               FullStack Developper
+                               juin 2024 - juillet 2024 (2 mois)
+                               Développement de la market-place « Bones ».
+
+
+                               Tâches :
+                               - Création de composants.
+                               - Création de nouvelles pages et features.
+                               - Suppressions de bugs existants.
+                               - Suivi de projet.
+                               - Réalisation des sprints.
+                               - Optimisation de code.
+                               - Tests.
+                               - Responsive.
+
+
+                                                                   Page 1 of 3
+FullStack Developer
+février 2024 - juin 2024 (5 mois)
+Développement de la market-place « Bones ».
+
+
+Tâches :
+- Création de composants.
+- Création de nouvelles pages et features.
+- Suppressions de bugs existants.
+- Suivi de projet.
+- Réalisation des sprints.
+- Optimisation de code.
+- Tests.
+- Responsive.
+
+
+Foudroyer
+FullStack Developer JavaScript
+janvier 2022 - juillet 2022 (7 mois)
+Développement de la partie Ranking qui sert à suivre des mots-clés
+et les évolutions en calculant leurs positionnement sur les moteurs de
+recherches (Google, Yahoo!, Bing). Partie développée avec ReactJS, NestJS,
+PostgresSQL AWS
+
+
+Autodidacte
+Autodidacte
+septembre 2017 - août 2021 (4 ans)
+
+
+Bird and Human
+Développeur web JavaScript
+décembre 2019 - février 2020 (3 mois)
+Développement d’une interface de suivi de projets entre prestataire de
+services et clients (HTML/CSS/PHP/JS/SQL)
+CF : projet "Organon" ci-dessous
+
+
+
+
+Formation
+Université de Franche-Comté
+Master Informatique, Développement et Validation du Logiciel · (octobre
+2022 - juillet 2024)
+
+
+Université de Limoges
+                                       Page 2 of 3
+Licence professionnelle, Métiers de l'informatique : conduite de projet -
+Technologie du développement web. · (septembre 2021 - juillet 2022)
+
+
+MOOC Gestion de Projet
+Gestion de projets en technologies de l'information · (septembre
+2021 - décembre 2021)
+
+
+CNED
+Brevet de technicien supérieur (BTS), Informatique · (septembre 2020 - mai
+2021)
+
+
+Lycée Louis Armand Paris
+Bts, Informatique · (septembre 2018 - mai 2020)
+
+
+
+
+                                   Page 3 of 3
+
