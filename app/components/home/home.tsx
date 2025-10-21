@@ -57,8 +57,13 @@ const Home = () => {
         className="relative flex w-full font-semibold justify-center text-center sm:text-start content-center items-center min-h-screen overflow-hidden"
         onMouseMove={handleMouseMove}
       >
-        {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900 opacity-50"></div>
+        {/* Animated background gradient with liquid glass effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-950 via-dark-900 to-dark-950"></div>
+        <div className="absolute inset-0 bg-gradient-mesh opacity-20"></div>
+        
+        {/* Animated liquid blobs */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary-500/30 liquid-blob blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/30 liquid-blob blur-3xl" style={{ animationDelay: '5s' }}></div>
         
         {/* Floating elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -123,7 +128,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full text-primary-300 font-medium text-xs sm:text-sm"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 liquid-glass rounded-full text-primary-300 font-medium text-xs sm:text-sm"
             >
               <HiSparkles className="text-accent-400" />
               <span className="uppercase tracking-wider">Développeur Full-Stack</span>
@@ -148,10 +153,10 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.8, delay: 0.6 }}
-              className='text-base sm:text-lg md:text-xl font-normal text-gray-300 normal-case leading-relaxed max-w-2xl'
+              className='text-base sm:text-lg md:text-xl font-normal text-gray-200 normal-case leading-relaxed max-w-2xl'
             >
               Développeur Full-Stack passionné par l&apos;innovation technologique.
-              Je conçois et développe des applications web modernes qui offrent des 
+              Je conçois et développe des applications web et mobiles modernes qui offrent des 
               <span className="text-accent-400 font-semibold"> expériences exceptionnelles</span> et 
               <span className="text-primary-400 font-semibold"> performantes</span>.
             </motion.p>
@@ -171,18 +176,18 @@ const Home = () => {
                     target='_blank'
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-2 sm:p-3 glass rounded-full hover:bg-primary-500/20 transition-all duration-300 group"
+                    className="p-3 liquid-glass-hover liquid-glass rounded-full transition-all duration-300 group"
                   >
-                    <FaLinkedin className='text-gray-300 w-5 h-5 sm:w-6 sm:h-6 group-hover:text-primary-400 transition-colors' />
+                    <FaLinkedin className='text-gray-200 w-5 h-5 sm:w-6 sm:h-6 group-hover:text-primary-400 transition-colors' />
                   </motion.a>
                   <motion.a 
                     href='https://github.com/marcucus' 
                     target='_blank'
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-2 sm:p-3 glass rounded-full hover:bg-primary-500/20 transition-all duration-300 group"
+                    className="p-3 liquid-glass-hover liquid-glass rounded-full transition-all duration-300 group"
                   >
-                    <FaGithubSquare className='text-gray-300 w-5 h-5 sm:w-6 sm:h-6 group-hover:text-primary-400 transition-colors' />
+                    <FaGithubSquare className='text-gray-200 w-5 h-5 sm:w-6 sm:h-6 group-hover:text-primary-400 transition-colors' />
                   </motion.a>
                 </div>
               </div>
@@ -191,7 +196,7 @@ const Home = () => {
                 href="#apropos"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold text-sm sm:text-base rounded-full hover:shadow-glow transition-all duration-300 mt-4 sm:mt-0"
+                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 text-white font-semibold text-sm sm:text-base rounded-full hover:shadow-glow-lg transition-all duration-300 mt-4 sm:mt-0"
               >
                 <span>Découvrir mon profil</span>
                 <FaArrowDown className="text-sm" />

@@ -10,28 +10,28 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#e0f2fe',
+          100: '#bae6fd',
+          200: '#7dd3fc',
+          300: '#38bdf8',
+          400: '#0ea5e9',
+          500: '#0284c7',
+          600: '#0369a1',
+          700: '#075985',
+          800: '#0c4a6e',
+          900: '#0a3d5c',
         },
         accent: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#eab308',
-          600: '#ca8a04',
-          700: '#a16207',
-          800: '#854d0e',
-          900: '#713f12',
+          50: '#fdf4ff',
+          100: '#fae8ff',
+          200: '#f5d0fe',
+          300: '#f0abfc',
+          400: '#e879f9',
+          500: '#d946ef',
+          600: '#c026d3',
+          700: '#a21caf',
+          800: '#86198f',
+          900: '#701a75',
         },
         dark: {
           50: '#f8fafc',
@@ -62,14 +62,21 @@ const config: Config = {
       },
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
-        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
-        'glow-accent': '0 0 20px rgba(234, 179, 8, 0.5)',
+        'glass-lg': '0 12px 48px 0 rgba(31, 38, 135, 0.45)',
+        'glow': '0 0 30px rgba(14, 165, 233, 0.6)',
+        'glow-lg': '0 0 50px rgba(14, 165, 233, 0.7)',
+        'glow-accent': '0 0 30px rgba(217, 70, 239, 0.6)',
+        'glow-accent-lg': '0 0 50px rgba(217, 70, 239, 0.7)',
+        'liquid': '0 15px 35px rgba(14, 165, 233, 0.2), 0 5px 15px rgba(0, 0, 0, 0.3)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'shine': 'shine 3s linear infinite',
         'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
+        'liquid': 'liquid 8s ease-in-out infinite',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'morph': 'morph 15s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -83,6 +90,31 @@ const config: Config = {
         'gradient-shift': {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        liquid: {
+          '0%, 100%': { 
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+            transform: 'rotate(0deg)'
+          },
+          '50%': { 
+            borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%',
+            transform: 'rotate(180deg)'
+          },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        morph: {
+          '0%, 100%': { 
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+          },
+          '34%': { 
+            borderRadius: '70% 30% 50% 50% / 30% 30% 70% 70%',
+          },
+          '67%': { 
+            borderRadius: '100% 60% 60% 100% / 100% 100% 60% 60%',
+          },
         },
       },
     },

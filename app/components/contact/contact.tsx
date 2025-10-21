@@ -49,10 +49,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-dark-800 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
-      <div className="absolute inset-0 bg-gradient-mesh opacity-10"></div>
+    <div className="bg-dark-900 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
+      {/* Background decoration with liquid glass */}
+      <div className="absolute inset-0 bg-gradient-mesh opacity-15"></div>
+      <div className="absolute top-20 left-20 w-80 h-80 bg-primary-500/20 liquid-blob blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-accent-500/20 liquid-blob blur-3xl" style={{ animationDelay: '6s' }}></div>
       
       <motion.div
         variants={staggerContainer}
@@ -63,20 +64,20 @@ const Contact = () => {
       >
         {/* Section Header */}
         <motion.div variants={fadeInUp} className="text-center mb-8 sm:mb-10 md:mb-12">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-4 sm:mb-6">
-            <FaCommentDots className="text-primary-400" />
-            <span className='text-xs sm:text-sm font-bold text-primary-400 uppercase tracking-wider'>Contact</span>
+          <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-3 liquid-glass rounded-full mb-4 sm:mb-6">
+            <FaCommentDots className="text-primary-400 text-lg" />
+            <span className='text-xs sm:text-sm font-bold text-primary-300 uppercase tracking-wider'>Contact</span>
           </div>
           <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6'>
             Contactez-<span className="text-gradient">moi</span>
           </h2>
-          <p className='text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0'>
+          <p className='text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0'>
             Si vous avez des questions ou des projets en tête, n&apos;hésitez pas à me contacter.
           </p>
         </motion.div>
 
-        {/* Contact Form */}
-        <motion.div variants={fadeInUp} className="card-modern p-4 sm:p-6 md:p-8">
+        {/* Contact Form with liquid glass */}
+        <motion.div variants={fadeInUp} className="liquid-glass p-6 sm:p-8 md:p-10 rounded-3xl">
           <div className="space-y-4 sm:space-y-6">
             {/* Name Field */}
             <div className="space-y-2">
@@ -93,7 +94,7 @@ const Contact = () => {
                 type="text" 
                 name="name" 
                 id="name" 
-                className="w-full p-3 sm:p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 text-sm sm:text-base" 
+                className="w-full p-3 sm:p-4 liquid-glass rounded-xl border border-primary-500/30 bg-dark-800/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400/50 transition-all duration-300 text-sm sm:text-base" 
                 placeholder="Votre nom complet"
                 value={name} 
                 required 
@@ -125,7 +126,7 @@ const Contact = () => {
                 type="email" 
                 name="email" 
                 id="email" 
-                className="w-full p-3 sm:p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 text-sm sm:text-base" 
+                className="w-full p-3 sm:p-4 liquid-glass rounded-xl border border-primary-500/30 bg-dark-800/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400/50 transition-all duration-300 text-sm sm:text-base" 
                 placeholder="votre.email@exemple.com"
                 value={email} 
                 required 
@@ -157,7 +158,7 @@ const Contact = () => {
                 id="message" 
                 name="message" 
                 rows={5} 
-                className="w-full p-3 sm:p-4 glass rounded-lg border border-gray-600/30 bg-dark-700/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 resize-none text-sm sm:text-base" 
+                className="w-full p-3 sm:p-4 liquid-glass rounded-xl border border-primary-500/30 bg-dark-800/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400/50 transition-all duration-300 resize-none text-sm sm:text-base" 
                 placeholder="Décrivez votre projet ou votre question..."
                 value={message} 
                 required 
@@ -185,10 +186,10 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className={`
-                w-full flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-white transition-all duration-300 text-sm sm:text-base
+                w-full flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-white transition-all duration-300 text-sm sm:text-base
                 ${isSending 
                   ? 'bg-gray-600 cursor-not-allowed' 
-                  : 'bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 hover:shadow-glow'
+                  : 'bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 hover:shadow-glow-lg'
                 }
               `}
             >

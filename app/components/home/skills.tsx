@@ -25,32 +25,33 @@ const Skills = () => {
   };
 
   return (
-    <div id="competences" className="bg-dark-800 py-8 px-4 sm:py-12 sm:px-6 md:py-16 md:px-8 lg:py-20 lg:px-12 xl:py-24 xl:px-20 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
-      <div className="absolute inset-0 bg-gradient-mesh opacity-10"></div>
+    <div id="competences" className="bg-dark-900 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
+      {/* Background decoration with liquid glass */}
+      <div className="absolute inset-0 bg-gradient-mesh opacity-15"></div>
+      <div className="absolute top-32 right-10 w-72 h-72 bg-primary-500/20 liquid-blob blur-3xl"></div>
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent-500/20 liquid-blob blur-3xl" style={{ animationDelay: '4s' }}></div>
       
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="max-w-6xl mx-auto relative z-10"
+        className="max-w-7xl mx-auto relative z-10"
       >
         {/* Section Header */}
-        <motion.div variants={fadeInUp} className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 glass rounded-full mb-3 sm:mb-4 md:mb-6">
-            <FaCogs className="text-primary-400" />
-            <span className='text-xs sm:text-sm lg:text-base font-bold text-primary-400 uppercase tracking-wider'>Compétences Techniques</span>
+        <motion.div variants={fadeInUp} className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 liquid-glass rounded-full mb-4 sm:mb-6 md:mb-8">
+            <FaCogs className="text-primary-400 text-lg" />
+            <span className='text-xs sm:text-sm lg:text-base font-bold text-primary-300 uppercase tracking-wider'>Compétences Techniques</span>
           </div>
-          <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8'>
             Mes <span className="text-gradient">Compétences</span>
           </h2>
-          <p className='text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-3 sm:mb-4 px-4 sm:px-0'>
+          <p className='text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6 px-4 sm:px-0'>
             Technologies et outils que je maîtrise pour créer des applications performantes
           </p>
           <div className="flex justify-center items-center">
-            <span className="text-accent-400 text-xs sm:text-sm lg:text-base font-medium bg-accent-900/30 px-3 sm:px-4 py-1 sm:py-2 rounded-full">
+            <span className="text-accent-300 text-xs sm:text-sm lg:text-base font-medium glass px-4 sm:px-5 py-2 sm:py-2.5 rounded-full">
               En constante évolution
             </span>
           </div>

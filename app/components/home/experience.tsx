@@ -20,81 +20,145 @@ const Experience = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      title: "Développeur Full Stack Freelance",
-      company: "Auto-entrepreneur",
-      period: "2023 - Présent",
+      title: "FullStack Developper",
+      company: "Ennea",
+      period: "Juin 2024 - Juillet 2024 (2 mois)",
       type: "work",
       description: [
-        "Développement d'applications web sur mesure pour diverses entreprises",
-        "Architecture et développement avec React/Next.js et PHP/Symfony",
-        "Création de sites vitrines et d'applications métier performantes",
-        "Optimisation SEO et performance web pour améliorer la visibilité"
+        "Développement de la market-place « Bones »",
+        "Création de composants et nouvelles pages",
+        "Suppressions de bugs existants et suivi de projet",
+        "Réalisation des sprints et optimisation de code",
+        "Tests et Responsive design"
       ],
-      technologies: ["React", "Next.js", "TypeScript", "PHP", "Symfony", "MySQL", "Docker"],
+      technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
       icon: <FaBriefcase />
     },
     {
       id: 2,
-      title: "Développeur Web Full Stack",
-      company: "Projets Clients Variés",
-      period: "2022 - 2023",
+      title: "FullStack Developer",
+      company: "Ennea",
+      period: "Février 2024 - Juin 2024 (5 mois)",
       type: "work",
       description: [
-        "Développement de LCF Auto Performance - Site vitrine avec React/Next.js",
-        "Création du site Dijoma avec intégration sur Netlify",
-        "Développement de Forestria - Application de randonnées avec Symfony",
-        "Maintenance et évolution d'applications existantes"
+        "Développement de la market-place « Bones »",
+        "Création de composants et nouvelles pages",
+        "Suppressions de bugs existants",
+        "Suivi de projet et réalisation des sprints",
+        "Optimisation de code, tests et responsive"
       ],
-      technologies: ["React", "Next.js", "Symfony", "Firebase", "Netlify", "MySQL"],
+      technologies: ["React", "Next.js", "JavaScript", "Node.js", "MySQL"],
       icon: <FaBriefcase />
     },
     {
       id: 3,
-      title: "Développeur Web",
-      company: "Foudroyer.com",
-      period: "2021 - 2022",
+      title: "FullStack Developer JavaScript",
+      company: "Foudroyer",
+      period: "Janvier 2022 - Juillet 2022 (7 mois)",
       type: "work",
       description: [
-        "Développement de l'outil Ranking pour le suivi SEO",
-        "Architecture et développement avec Gatsby et NestJS",
+        "Développement de la partie Ranking pour le suivi de mots-clés",
+        "Calcul du positionnement sur les moteurs de recherche (Google, Yahoo!, Bing)",
+        "Développement avec ReactJS et NestJS",
         "Gestion de base de données PostgreSQL",
-        "Optimisation des performances et de l'expérience utilisateur"
+        "Déploiement sur AWS"
       ],
-      technologies: ["Gatsby", "NestJS", "PostgreSQL", "React", "TypeScript"],
+      technologies: ["ReactJS", "NestJS", "PostgreSQL", "AWS"],
       icon: <FaBriefcase />
     },
     {
       id: 4,
-      title: "Formation Développeur Web",
-      company: "Formation Autodidacte",
-      period: "2020 - 2021",
+      title: "Développeur web JavaScript",
+      company: "Bird and Human",
+      period: "Décembre 2019 - Février 2020 (3 mois)",
+      type: "work",
+      description: [
+        "Développement d'une interface de suivi de projets",
+        "Interface entre prestataire de services et clients",
+        "Projet \"Organon\"",
+        "Technologies: HTML/CSS/PHP/JS/SQL"
+      ],
+      technologies: ["HTML", "CSS", "PHP", "JavaScript", "SQL"],
+      icon: <FaBriefcase />
+    },
+    {
+      id: 5,
+      title: "Master Informatique",
+      company: "Université de Franche-Comté",
+      period: "Octobre 2022 - Juillet 2024",
       type: "education",
       description: [
-        "Apprentissage autonome des technologies web modernes",
-        "Maîtrise des frameworks JavaScript et PHP",
-        "Projets personnels et open source",
-        "Veille technologique continue"
+        "Développement et Validation du Logiciel",
+        "Formation approfondie en développement logiciel",
+        "Méthodologies de test et validation",
+        "Gestion de projets informatiques"
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Git"],
+      icon: <FaGraduationCap />
+    },
+    {
+      id: 6,
+      title: "Licence professionnelle",
+      company: "Université de Limoges",
+      period: "Septembre 2021 - Juillet 2022",
+      type: "education",
+      description: [
+        "Métiers de l'informatique : conduite de projet",
+        "Technologie du développement web",
+        "Gestion de projet informatique",
+        "Développement web moderne"
+      ],
+      icon: <FaGraduationCap />
+    },
+    {
+      id: 7,
+      title: "BTS Informatique",
+      company: "CNED",
+      period: "Septembre 2020 - Mai 2021",
+      type: "education",
+      description: [
+        "Brevet de technicien supérieur en Informatique",
+        "Formation en développement informatique",
+        "Programmation et algorithmique",
+        "Bases de données et réseaux"
+      ],
+      icon: <FaGraduationCap />
+    },
+    {
+      id: 8,
+      title: "BTS Informatique",
+      company: "Lycée Louis Armand Paris",
+      period: "Septembre 2018 - Mai 2020",
+      type: "education",
+      description: [
+        "Formation en informatique et développement",
+        "Apprentissage des fondamentaux du développement",
+        "Programmation et conception de systèmes",
+        "Travaux pratiques et projets"
+      ],
       icon: <FaGraduationCap />
     }
   ];
 
   const certifications = [
     {
-      name: "React et Next.js",
-      issuer: "Formation Continue",
-      year: "2023"
+      name: "Master Informatique - Développement et Validation du Logiciel",
+      issuer: "Université de Franche-Comté",
+      year: "2022-2024"
     },
     {
-      name: "PHP et Symfony",
-      issuer: "Formation Continue",
-      year: "2022"
+      name: "Licence professionnelle - Métiers de l'informatique",
+      issuer: "Université de Limoges",
+      year: "2021-2022"
     },
     {
-      name: "JavaScript ES6+",
-      issuer: "Formation Continue",
+      name: "Gestion de projets en technologies de l'information",
+      issuer: "MOOC Gestion de Projet",
       year: "2021"
+    },
+    {
+      name: "BTS Informatique",
+      issuer: "CNED / Lycée Louis Armand Paris",
+      year: "2018-2021"
     }
   ];
 
@@ -127,70 +191,72 @@ const Experience = () => {
   };
 
   return (
-    <div className="bg-dark-800 py-20 px-10 lg:px-20 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/5 to-accent-900/5"></div>
+    <div className="bg-dark-900 py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-20 relative overflow-hidden">
+      {/* Background decoration with liquid glass effect */}
+      <div className="absolute inset-0 bg-gradient-mesh opacity-20"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
       
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="max-w-6xl mx-auto relative z-10"
+        className="max-w-7xl mx-auto relative z-10"
       >
-        {/* Section Header */}
-        <motion.div variants={fadeInUp} className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
-            <FaBriefcase className="text-primary-400" />
-            <span className='text-sm font-bold text-primary-400 uppercase tracking-wider'>Parcours Professionnel</span>
+        {/* Section Header with liquid glass */}
+        <motion.div variants={fadeInUp} className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 liquid-glass rounded-full mb-6 sm:mb-8">
+            <FaBriefcase className="text-primary-400 text-lg" />
+            <span className='text-sm sm:text-base font-bold text-primary-300 uppercase tracking-wider'>Parcours Professionnel</span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8'>
             Mon <span className="text-gradient">Expérience</span>
           </h2>
-          <p className='text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed'>
+          <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             Un parcours orienté innovation et apprentissage continu dans le développement web
           </p>
         </motion.div>
 
         {/* Timeline */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Experience Timeline */}
           <motion.div variants={fadeInUp} className="space-y-8">
-            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-              <FaBriefcase className="text-primary-400" />
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+              <FaBriefcase className="text-primary-400 text-xl sm:text-2xl" />
               Expérience & Formation
             </h3>
             
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-accent-500"></div>
+              {/* Timeline line with gradient */}
+              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 via-accent-500 to-primary-500"></div>
               
               {experiences.map((exp, index) => (
                 <motion.div
                   key={exp.id}
                   variants={fadeInUp}
-                  className="relative flex gap-6 pb-12 last:pb-0"
+                  className="relative flex gap-6 pb-10 sm:pb-12 last:pb-0"
                 >
-                  {/* Timeline icon */}
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${getTypeColor(exp.type)} flex items-center justify-center text-white text-lg z-10 shadow-lg`}>
+                  {/* Timeline icon with liquid glass effect */}
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r ${getTypeColor(exp.type)} flex items-center justify-center text-white text-lg sm:text-xl z-10 shadow-glow`}>
                     {exp.icon}
                   </div>
                   
-                  {/* Content */}
-                  <div className="flex-1 card-modern p-6 hover:scale-[1.02] transition-transform">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  {/* Content with liquid glass card */}
+                  <div className="flex-1 liquid-glass-hover liquid-glass p-5 sm:p-6 rounded-2xl">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
                       <div>
-                        <h4 className="text-xl font-bold text-white">{exp.title}</h4>
-                        <p className="text-primary-400 font-semibold">{exp.company}</p>
+                        <h4 className="text-lg sm:text-xl font-bold text-white">{exp.title}</h4>
+                        <p className="text-primary-300 font-semibold text-sm sm:text-base">{exp.company}</p>
                       </div>
-                      <span className="text-sm text-accent-400 font-medium bg-accent-900/30 px-3 py-1 rounded-full mt-2 sm:mt-0">
+                      <span className="text-xs sm:text-sm text-accent-300 font-medium glass px-3 py-1.5 rounded-full">
                         {exp.period}
                       </span>
                     </div>
                     
                     <ul className="space-y-2 mb-4">
                       {exp.description.map((desc, i) => (
-                        <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
+                        <li key={i} className="text-gray-300 text-sm sm:text-base flex items-start gap-2">
                           <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0"></span>
                           {desc}
                         </li>
@@ -202,7 +268,7 @@ const Experience = () => {
                         {exp.technologies.map((tech, i) => (
                           <span
                             key={i}
-                            className="px-2 py-1 bg-primary-900/30 text-primary-300 text-xs rounded border border-primary-700/30"
+                            className="px-2.5 py-1 glass text-primary-200 text-xs sm:text-sm rounded-lg border border-primary-500/30"
                           >
                             {tech}
                           </span>
@@ -219,8 +285,8 @@ const Experience = () => {
           <motion.div variants={fadeInUp} className="space-y-8">
             {/* Certifications */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <FaCertificate className="text-accent-400" />
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <FaCertificate className="text-accent-400 text-xl sm:text-2xl" />
                 Certifications & Formations
               </h3>
               
@@ -229,14 +295,14 @@ const Experience = () => {
                   <motion.div
                     key={index}
                     variants={fadeInUp}
-                    className="card-modern p-4 hover:scale-[1.02] transition-transform"
+                    className="liquid-glass-hover liquid-glass p-4 sm:p-5 rounded-xl"
                   >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-semibold text-white">{cert.name}</h4>
-                        <p className="text-gray-400 text-sm">{cert.issuer}</p>
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-white text-sm sm:text-base mb-1">{cert.name}</h4>
+                        <p className="text-gray-300 text-xs sm:text-sm">{cert.issuer}</p>
                       </div>
-                      <span className="text-accent-400 font-bold">{cert.year}</span>
+                      <span className="text-accent-300 font-bold text-sm sm:text-base glass px-3 py-1 rounded-lg">{cert.year}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -245,8 +311,8 @@ const Experience = () => {
 
             {/* Skills Categories */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <HiOfficeBuilding className="text-primary-400" />
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <HiOfficeBuilding className="text-primary-400 text-xl sm:text-2xl" />
                 Domaines d&apos;Expertise
               </h3>
               
@@ -259,12 +325,12 @@ const Experience = () => {
                   },
                   {
                     category: "Backend Development",
-                    skills: "PHP, Symfony, Node.js, NestJS",
+                    skills: "Node.js, NestJS, PHP, PostgreSQL",
                     level: 85
                   },
                   {
                     category: "Database & DevOps",
-                    skills: "MySQL, PostgreSQL, Docker, Git",
+                    skills: "MySQL, PostgreSQL, AWS, Git",
                     level: 80
                   },
                   {
@@ -276,19 +342,19 @@ const Experience = () => {
                   <motion.div
                     key={index}
                     variants={fadeInUp}
-                    className="card-modern p-4"
+                    className="liquid-glass p-4 sm:p-5 rounded-xl"
                   >
-                    <div className="flex justify-between items-center mb-2">
-                      <h4 className="font-semibold text-white">{skill.category}</h4>
-                      <span className="text-primary-400 font-bold">{skill.level}%</span>
+                    <div className="flex justify-between items-center mb-3">
+                      <h4 className="font-semibold text-white text-sm sm:text-base">{skill.category}</h4>
+                      <span className="text-primary-300 font-bold text-sm sm:text-base">{skill.level}%</span>
                     </div>
-                    <p className="text-gray-400 text-sm mb-3">{skill.skills}</p>
-                    <div className="w-full bg-dark-700 rounded-full h-2">
+                    <p className="text-gray-300 text-xs sm:text-sm mb-3">{skill.skills}</p>
+                    <div className="w-full glass rounded-full h-2.5 overflow-hidden">
                       <motion.div
-                        className="bg-gradient-to-r from-primary-500 to-accent-500 h-2 rounded-full"
+                        className="bg-gradient-to-r from-primary-400 via-accent-400 to-primary-500 h-2.5 rounded-full shadow-glow"
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: index * 0.2 }}
+                        transition={{ duration: 1.5, delay: index * 0.2, ease: "easeOut" }}
                         viewport={{ once: true }}
                       ></motion.div>
                     </div>
